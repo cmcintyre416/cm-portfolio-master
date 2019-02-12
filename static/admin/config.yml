@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: cmcintyre416/cm-portfolio-master
 
 media_folder: static/assets
 public_folder: assets

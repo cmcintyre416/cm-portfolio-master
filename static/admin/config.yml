@@ -6,12 +6,18 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: navLinks
+    label: Nav Links
+    folder: navLinks
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+  - name: projects
+    label: Projects
+    folder: projects
+    create: true
+    fields:
+      - { name: path, label: Path }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }

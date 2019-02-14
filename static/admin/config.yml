@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: cmcintyre416/cm-portfolio-master
+  repo: cmcintyre416/cm-portfolio-master/develop
 
 media_folder: static/assets
 public_folder: assets

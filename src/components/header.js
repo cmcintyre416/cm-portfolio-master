@@ -2,33 +2,43 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import styled from 'styled-components';
+import { MainWrapper } from '../styles/containers';
+import {darkBlue} from '../styles/colours';
+
+const MainHeader = styled.div`
+  background-color: white;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .period {
+    color: ${darkBlue};
+    font-size: 2rem;
+  }
+`;
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <MainHeader>
+    <MainWrapper>
+      <h1>
+        <Link>
           {siteTitle}
+          <span className="period">.</span>
         </Link>
       </h1>
-    </div>
-  </header>
+    </MainWrapper>
+  </MainHeader>
 )
 
 Header.propTypes = {

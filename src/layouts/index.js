@@ -7,53 +7,18 @@ import Footer from '../components/footer';
 import Transition from '../components/transition';
 
 import "../styles/normalize.css";
-import styled from "styled-components";
-import { lightBlue } from '../styles/colours';
+import { SiteWrapper, LayoutWrapper, Content } from '../styles/layout';
 
-const SiteWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  min-height: 1000px;
-  width: 100%;
+import NProgress from 'nprogress';
 
-  .layoutBodyWrapper {
-    flex-grow: 1;
-  }
-`;
+const turbolinks = document.querySelectorAll('.turbolinks');
+console.log(turbolinks);
 
-const LayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  min-height: 100%;
-  position: relative;
+NProgress.start();
 
-  .navContainer {
-    width: 250px;
-  }
-  
-  .closed {
-    width: 50px;
-    transition: .4s ease;
-
-    .mainNav {
-      display:none;
-    }
-
-    .mainSocial {
-      display: none;
-    }
-  }
-`;
-
-const Content = styled.div`
-  background-color: ${lightBlue};
-  position: relative;
-  z-index: 5;
-  flex-grow: 1;
-  padding: 25px;
-`;
-
+// turbolinks.addEventListener('click', function(){
+//   NProgress.start();
+// });
 
 const Layout = ({ children, location }) => (
   <StaticQuery

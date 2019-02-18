@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
   <MainHeader>
     <MainWrapper>
       <h1>
-        <Link>
+        <Link to='/'>
           {siteTitle}
           <span className="period">.</span>
         </Link>

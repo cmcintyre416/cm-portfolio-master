@@ -6,7 +6,6 @@ import Nav from "../components/nav";
 import Header from "./header";
 import "./normalize.css";
 import styled from "styled-components";
-import { MainWrapper } from "../styles/containers";
 import {lightBlue} from '../styles/colours';
 import Footer from '../components/footer';
 
@@ -15,6 +14,8 @@ const SiteWrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   min-height: 1000px;
+  max-width: 1800px;
+  width: 100%;
 
   .layoutBodyWrapper {
     flex-grow: 1;
@@ -54,16 +55,16 @@ const Layout = ({ children }) => (
       <>
         <SiteWrapper>
           <Header siteTitle={data.site.siteMetadata.title}/>
-          <MainWrapper className="layoutBodyWrapper">
-          <LayoutWrapper>
-              <div className="navContainer">
-                <Nav/>
-              </div>
-              <Content>
-                {children}
-              </Content>
-          </LayoutWrapper>
-          </MainWrapper>
+          <div className="layoutBodyWrapper">
+            <LayoutWrapper>
+                <div className="navContainer">
+                  <Nav/>
+                </div>
+                <Content>
+                  {children}
+                </Content>
+            </LayoutWrapper>
+          </div>
           <Footer/>
         </SiteWrapper>
       </>

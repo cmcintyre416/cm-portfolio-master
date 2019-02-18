@@ -1,14 +1,32 @@
 import { Link } from "gatsby";
 import React from "react";
-import { navItems } from "../../static/data/navItems";
 import styled from "styled-components";
-import {darkBlue, mediumBlue} from '../styles/colours';
 
-export const Aside = styled.div`
-  padding-top: 100px;
+import Social from '../components/social';
+
+import { navItems } from "../../static/data/navItems";
+
+import { MainWrapper } from '../styles/containers';
+import { darkBlue, mediumBlue, darkHoverBlue } from '../styles/colours';
+import { BlueCta } from "../styles/buttons";
+
+const Aside = styled.div`
+  padding: 100px 0 50px;
+  height: 100%;
+
+  .mainNavWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .minNavButton {
+    font-size: 0.4rem;
+  }
 `;
 
-export const MainNav = styled.nav`
+const MainNav = styled.nav`
   display: flex;
   flex-direction: column;
 
@@ -19,48 +37,48 @@ export const MainNav = styled.nav`
     letter-spacing: 0.4px;
     text-decoration: none;
     font-weight: bold;
-    max-width: 200px;
 
     &:hover {
-      color: ${mediumBlue};
+      color: ${darkHoverBlue};
     }
   }
 `;
 
-export const Social = styled.nav`
-  
-`;
 
 export default class Nav extends React.Component {
   constructor(props){
     super(props);
     this.state = ({
+      
     });
   }
 
   render(){
     return (
       <Aside>
-        <MainNav>
-          {navItems.map(item => {
-            return <Link 
-              to={item.link}
-              key={item.id}  
-              activeStyle={
-                {
-                  transition: `0.5s ease`,
-                  borderBottom: `1.5px solid ${mediumBlue}`,
-                  transform: `scale(1.1)`,
-                  marginLeft: `10px`,
-                  color: `${darkBlue}`
+        <BlueCta className="minNavButton"/>
+        <MainWrapper className="mainNavWrapper">
+          <MainNav>
+            {navItems.map(item => {
+              return <Link 
+                to={item.link}
+                key={item.id}  
+                activeStyle={
+                  {
+                    transition: `0.5s ease`,
+                    borderBottom: `1px solid ${mediumBlue}`,
+                    transform: `scale(1.1)`,
+                    marginLeft: `10px`,
+                    color: `${darkBlue}`
+                  }
                 }
-              }
-              >
-              {item.text}
-            </Link>
-          })}
-        </MainNav>
-        <Social/>
+                >
+                {item.text}
+              </Link>
+            })}
+          </MainNav>
+          <Social/>
+        </MainWrapper>
       </Aside>
     )
   }

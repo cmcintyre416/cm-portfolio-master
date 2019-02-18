@@ -3,20 +3,24 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { MainWrapper } from '../styles/containers';
 
 import { PageContainer } from '../styles/containers';
-import {BlueCta} from '../styles/buttons';
-import {darkBlue} from '../styles/colours';
+import { BlueCta } from '../styles/buttons';
+import { darkBlue } from '../styles/colours';
 import styled from 'styled-components';
 import Icon from '../images/topographyBlue.svg';
 
 
 const HomePage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 350px;
+  
+  .wrapper{
+    padding-top: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
 
   h2 {
     font-size: 2.4rem;
@@ -37,6 +41,15 @@ const HomePage = styled.div`
     position: absolute;
     z-index: -1;
     opacity: 0.6;
+
+    @media(max-width: 1400px){
+      width: 500px;
+      height: 500px;
+    }
+
+    @media(max-width: 1000px){
+      opacity: 0.2;
+    }
   }
 
   .topographyBlue-bottom {
@@ -56,13 +69,15 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
     <PageContainer>
       <HomePage>
-        <h2>Colin McIntyre</h2>
-        <h3>Web Developer</h3>
-        <Link to={'/contact/'}>
-          <BlueCta>Contact Me</BlueCta>
-        </Link> 
-        <Icon className="topographyBlue topographyBlue-bottom"/>
-        <Icon className="topographyBlue topographyBlue-top"/>
+        <MainWrapper className="wrapper">
+          <h2>Colin McIntyre</h2>
+          <h3>Web Developer</h3>
+          <Link to={'/contact/'}>
+            <BlueCta>Contact Me</BlueCta>
+          </Link> 
+          <Icon className="topographyBlue topographyBlue-bottom"/>
+          <Icon className="topographyBlue topographyBlue-top"/>
+        </MainWrapper>
       </HomePage>
     </PageContainer>
   </Layout>

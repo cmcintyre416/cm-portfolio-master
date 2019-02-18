@@ -1,12 +1,11 @@
 import React from "react";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Projects = () => (
-  <Layout>
+  <div>
     <SEO title="Projects"/>
-  </Layout>
+  </div>
 )
 
 export default Projects;

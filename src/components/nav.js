@@ -23,6 +23,8 @@ const Aside = styled.div`
 
   .minNavButton {
     font-size: 0.4rem;
+    position: absolute;
+    right: 0;
   }
 `;
 

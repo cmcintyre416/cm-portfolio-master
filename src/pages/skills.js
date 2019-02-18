@@ -1,12 +1,11 @@
 import React from "react";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Skills = () => (
-  <Layout>
+  <div>
     <SEO title="Skills"/>
-  </Layout>
+  </div>
 )
 
 export default Skills;

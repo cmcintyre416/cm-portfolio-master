@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { MainWrapper } from '../styles/containers';
 
@@ -65,22 +64,22 @@ const HomePage = styled.div`
 `;
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
-    <PageContainer>
-      <HomePage>
-        <MainWrapper className="wrapper">
-          <h2>Colin McIntyre</h2>
-          <h3>Web Developer</h3>
-          <Link to={'/contact/'}>
-            <BlueCta>Contact Me</BlueCta>
-          </Link> 
-          <Icon className="topographyBlue topographyBlue-bottom"/>
-          <Icon className="topographyBlue topographyBlue-top"/>
-        </MainWrapper>
-      </HomePage>
-    </PageContainer>
-  </Layout>
+    <div>
+      <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
+      <PageContainer>
+        <HomePage>
+          <MainWrapper className="wrapper">
+            <h2>Colin McIntyre</h2>
+            <h3>Web Developer</h3>
+            <Link to={'/contact/'}>
+              <BlueCta>Contact Me</BlueCta>
+            </Link> 
+            <Icon className="topographyBlue topographyBlue-bottom"/>
+            <Icon className="topographyBlue topographyBlue-top"/>
+          </MainWrapper>
+        </HomePage>
+      </PageContainer>
+    </div>
 )
 
 export default IndexPage

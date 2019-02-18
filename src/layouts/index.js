@@ -1,20 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import Header from "../components/header";
 import Nav from "../components/nav";
-
-import Header from "./header";
-import "./normalize.css";
-import styled from "styled-components";
-import {lightBlue} from '../styles/colours';
 import Footer from '../components/footer';
+import Transition from '../components/transition';
+
+import "../styles/normalize.css";
+import styled from "styled-components";
+import { lightBlue } from '../styles/colours';
 
 const SiteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
   min-height: 1000px;
-  max-width: 1800px;
   width: 100%;
 
   .layoutBodyWrapper {
@@ -40,7 +40,7 @@ const Content = styled.div`
   padding: 25px;
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -61,7 +61,9 @@ const Layout = ({ children }) => (
                   <Nav/>
                 </div>
                 <Content>
-                  {children}
+                  <Transition location={location}>
+                    {children}
+                  </Transition>
                 </Content>
             </LayoutWrapper>
           </div>

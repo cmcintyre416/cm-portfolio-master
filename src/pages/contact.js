@@ -1,12 +1,10 @@
 import React from "react";
-
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Contact = () => (
-  <Layout>
+  <div>
     <SEO title="Contact"/>
-  </Layout>
+  </div>
 )
 
 export default Contact;

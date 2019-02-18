@@ -26,19 +26,34 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 100%;
+  position: relative;
 
   .navContainer {
     width: 250px;
+  }
+  
+  .closed {
+    width: 50px;
+    transition: .4s ease;
+
+    .mainNav {
+      display:none;
+    }
+
+    .mainSocial {
+      display: none;
+    }
   }
 `;
 
 const Content = styled.div`
   background-color: ${lightBlue};
   position: relative;
-  z-index: 10;
+  z-index: 5;
   flex-grow: 1;
   padding: 25px;
 `;
+
 
 const Layout = ({ children, location }) => (
   <StaticQuery

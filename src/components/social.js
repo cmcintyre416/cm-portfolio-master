@@ -17,11 +17,10 @@ const SocialMedia = styled.div`
             color: ${darkHoverBlue}
         }
     }
-
 `;
 
 const Social = () => (
-  <SocialMedia>
+  <SocialMedia className="mainSocial">
     <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/colin_mcintyre_">
         <FontAwesomeIcon icon={faTwitter} />
     </a>

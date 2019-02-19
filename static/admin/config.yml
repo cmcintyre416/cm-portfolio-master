@@ -13,6 +13,6 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title, pattern: ['.{20,}', "Must have at least 20 characters"]}
+      - { name: title, label: Title}
       - {label: Featured Image, name: thumbnail, widget: image, required: true}
       - { name: body, label: Body, widget: markdown }

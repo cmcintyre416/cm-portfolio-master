@@ -9,12 +9,11 @@ import Transition from '../components/transition';
 import "../styles/normalize.css";
 import { SiteWrapper, LayoutWrapper, Content } from '../styles/layout';
 
-import NProgress from 'nprogress';
+// import NProgress from 'nprogress';
 
-const turbolinks = document.querySelectorAll('.turbolinks');
-console.log(turbolinks);
+// const turbolinks = document.querySelectorAll('.turbolinks');
 
-NProgress.start();
+// NProgress.start();
 
 // turbolinks.addEventListener('click', function(){
 //   NProgress.start();

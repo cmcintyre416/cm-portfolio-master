@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkBlue } from '../styles/colours';
+import { darkBlue, darkHoverBlue } from '../styles/colours';
 
 export const BlueCta = styled.button`
     text-transform: uppercase;
@@ -15,7 +15,7 @@ export const BlueCta = styled.button`
     &:hover {
         transform:scale(1.1);
         box-shadow: 0 5px 5px lightgrey;
-        background-color: darkblue;
+        background-color: ${darkHoverBlue};
         color: white;
     }
 `;

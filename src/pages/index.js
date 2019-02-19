@@ -12,7 +12,7 @@ import { MainWrapper } from '../styles/containers';
 
 
 const IndexPage = () => (
-    <div>
+    <>
       <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
       <PageContainer>
         <HomePage>
@@ -27,7 +27,7 @@ const IndexPage = () => (
           </MainWrapper>
         </HomePage>
       </PageContainer>
-    </div>
+    </>
 )
 
 export default IndexPage

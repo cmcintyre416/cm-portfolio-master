@@ -20,24 +20,14 @@ export default function Template({data}){
 }
 
 export const pageQuery = graphql`
-  {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
-    totalCount
-    edges {
-      node {
-        id
-        excerpt(pruneLength: 250)
-        timeToRead
-        wordCount {
-          words
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          path
-          title
-        }
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        path
+        title
       }
     }
   }
-}
 `

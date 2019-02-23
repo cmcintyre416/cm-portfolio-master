@@ -32,7 +32,7 @@ export const Aside = styled.div`
     align-items: flex-end;
 
     .line {
-      height: 2.5px;
+      height: 2px;
       border-radius: 5px;
       background-color: ${darkBlue};
       margin: 3px 10px;

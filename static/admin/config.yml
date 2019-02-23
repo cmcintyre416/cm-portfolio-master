@@ -9,28 +9,10 @@ collections:
   - name: blog
     label: Blog
     folder: blog
-    description: Create and edit blog posts here.
     create: true
     fields:
-      - { 
-          name: 'title', 
-          label: 'Title', 
-          widget: 'string', 
-          tagname: 'h1' 
-        }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          dateFormat: 'YYYY-MM-DD',
-          timeFormat: 'HH:mm',
-          format: 'YYYY-MM-DD HH:mm'
-        }
-      - {
-          label: 'Cover Image', 
-          name: 'image', 
-          widget: 'image', 
-          required: true, 
-          tagname: ''
-        }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title}
+      - { name: image, label: Image, widget: image, required: true}
       - { name: body, label: Body, widget: markdown }

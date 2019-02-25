@@ -6,16 +6,6 @@ import Transition from '../components/transition';
 import "../styles/normalize.css";
 import { SiteWrapper, LayoutWrapper } from '../styles/layout';
 
-// import NProgress from 'nprogress';
-
-// const turbolinks = document.querySelectorAll('.turbolinks');
-
-// NProgress.start();
-
-// turbolinks.addEventListener('click', function(){
-//   NProgress.start();
-// });
-
 const Layout = ({ children, location }) => (
   <>
     <SiteWrapper>
@@ -23,8 +13,8 @@ const Layout = ({ children, location }) => (
         <Transition location={location}>
           {children}
         </Transition>
-        <Footer/>
       </LayoutWrapper>
+        <Footer/>
     </SiteWrapper>
   </>
 );

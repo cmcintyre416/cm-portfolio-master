@@ -35,7 +35,7 @@ const MainHeader = styled.div`
 `;
 
 const Header = ({ siteTitle }) => (
-  <MainHeader>
+  <MainHeader className="header">
     <MainWrapper>
       <h1>
         <Link to='/'>

@@ -5,6 +5,7 @@ export const Aside = styled.div`
   padding: 100px 0;
   height: 100%;
   position: relative;
+  background-color: white;
 
   .mainNavWrapper {
     height: 100%;
@@ -22,7 +23,7 @@ export const Aside = styled.div`
     transform: translateY(-50%);
     height: 60px;
     width: 60px;
-    z-index: 10000;
+    z-index: 500;
     background-color: white;
     border: none;
     border-radius: 50%;
@@ -32,11 +33,21 @@ export const Aside = styled.div`
     justify-content: center;
     align-items: flex-end;
 
+    &:before{
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 65px;
+    left: 0px;
+    background: white;
+    }
+
     .line {
-      height: 2.5px;
+      height: 2px;
       border-radius: 5px;
       background-color: ${darkBlue};
       margin: 3px 10px;
+      z-index: 501;
     }
 
     .line1 {
@@ -58,6 +69,13 @@ export const Aside = styled.div`
     &:hover{
       box-shadow: 2px 0px 2px lightgrey;
 
+      .line {
+        background-color: ${darkHoverBlue};
+      }
+    }
+
+    &:focus {
+      outline: none;
       .line {
         background-color: ${darkHoverBlue};
       }

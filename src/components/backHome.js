@@ -5,8 +5,8 @@ import { darkBlue, darkHoverBlue } from '../styles/colours';
 
 const BackHomeContainer = styled.div`
    position: absolute;
-   top: 40px;
-   right: 50px;
+   top: 10px;
+   right: 0px;
    z-index: 1000;
 
    a {

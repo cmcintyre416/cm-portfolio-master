@@ -11,35 +11,45 @@ import { Aside, MainNav } from '../styles/mainnav';
 
 
 export default class Nav extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      navOpen: true,
-    };
-    this.slideNav = this.slideNav.bind(this);
+  state = {
+    navOpen: true,
+  };
+
+  componentDidMount(){
+    let currentPath = window.location.pathname;
+    if(currentPath !== '/'){
+      this.setState({
+      navOpen: false
+      });
+      this.slideNav();
+    }
   }
 
   toggleNav = e => {
     e.preventDefault();
-    this.setState({
-      navOpen: !this.state.navOpen
-    });
     this.slideNav();
   }
   
   slideNav = () => {
+
+    this.setState({
+      navOpen: !this.state.navOpen
+    });
+
     const navContainer = document.querySelector('.navContainer');
+
     if(this.state.navOpen){
       navContainer.classList.add('closed');
     }else{
       navContainer.classList.remove('closed');
     }
+
   }
 
   render(){
     return (
       <Aside>
-        <button onClick={this.toggleNav.bind(this)} className="minNavButton">
+        <button onClick={this.toggleNav} className="minNavButton">
           <div className="line line1"></div>
           <div className="line line2"></div>
           <div className="line line3"></div>

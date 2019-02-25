@@ -5,7 +5,7 @@ import { lightGrey } from '../styles/colours';
 
 const MainFooter = styled.div`
     background-color: ${lightGrey};
-    min-height: 100px;
+    min-height: 50px;
 `;
 
 const Footer = ({ siteTitle }) => (

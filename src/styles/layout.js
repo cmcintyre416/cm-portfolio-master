@@ -1,40 +1,30 @@
 import styled from "styled-components";
-import { lightBlue } from '../styles/colours';
 
 export const SiteWrapper = styled.div`
-display: flex;
-flex-direction: column;
-height: 100vh;
-min-height: 1000px;
-width: 100%;
-
-.layoutBodyWrapper {
-  flex-grow: 1;
-}
-`;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  `;
 
 export const LayoutWrapper = styled.div`
-display: flex;
-flex-direction: row;
-min-height: 100%;
-position: relative;
+  height: 100%;
 
-.navContainer {
-  width: 250px;
-  transition: 1s ease;
+  .navContainer {
+    width: 250px;
+    transition: 1s ease;
 
-  .mainNav {
-    opacity: 1;
-    max-height: 200px;
-    transform: translateX(0);
-    transition: 1.5s ease;
-  }
+    .mainNav {
+      opacity: 1;
+      max-height: 200px;
+      transform: translateX(0);
+      transition: 1.5s ease;
+    }
 
-  .mainSocial {
-    opacity: 1;
-    transform: translateX(0);
-    transition: 1.5s ease;
-  }
+    .mainSocial {
+      opacity: 1;
+      transform: translateX(0);
+      transition: 1.5s ease;
+    }
 }
 
 .closed {
@@ -55,12 +45,4 @@ position: relative;
     transition: 0.8s ease;
   }
 }
-`;
-
-export const Content = styled.div`
-background-color: ${lightBlue};
-position: relative;
-z-index: 5;
-flex-grow: 1;
-padding: 25px;
 `;

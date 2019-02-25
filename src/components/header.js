@@ -9,9 +9,11 @@ import {darkBlue} from '../styles/colours';
 const MainHeader = styled.div`
   background-color: white;
   box-shadow: 0px 2px 5px lightgrey;
-  padding: 25px 0;
+  min-height: 100px;
   position: relative;
   z-index: 1000;
+  display: flex;
+  align-items: center;
 
   h1 {
     margin: 0;
@@ -50,7 +52,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Header

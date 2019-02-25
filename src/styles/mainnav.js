@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { darkBlue, darkHoverBlue } from '../styles/colours';
 
 export const Aside = styled.div`
-  padding: 100px 0 50px;
+  padding: 100px 0;
   height: 100%;
   position: relative;
 
@@ -11,6 +11,7 @@ export const Aside = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow:hidden;
   }
 
   .minNavButton {

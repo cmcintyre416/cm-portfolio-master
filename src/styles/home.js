@@ -1,13 +1,20 @@
-import { darkBlue } from '../styles/colours';
+import { darkBlue, lightBlue } from '../styles/colours';
 import styled from 'styled-components';
 
 export const HomePage = styled.div`
-  .wrapper{
-    padding-top: 325px;
+  display: flex;
+  flex-direction: row;
+  min-height: 800px;
+  height: calc(100vh - 150px);
+
+  .contentWrapper{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    position: relative;
+    background-color: ${lightBlue};
   }
 
   h2 {

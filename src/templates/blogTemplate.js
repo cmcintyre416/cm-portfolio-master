@@ -30,4 +30,4 @@ query($path: String!) {
     }
   }
 }
-`
+`;

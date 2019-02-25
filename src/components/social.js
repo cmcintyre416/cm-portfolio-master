@@ -9,6 +9,10 @@ import {
   } from '@fortawesome/free-brands-svg-icons';
 
 const SocialMedia = styled.div`
+    
+    /* max-height: 30px; */
+    overflow: hidden;
+
     a {
         margin-right: 25px;
         color: ${darkBlue};

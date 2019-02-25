@@ -26,7 +26,7 @@ const PostLink = ({ post }) => (
   <PostContainer>
     <div className="imageContainer">
       <Link to={post.frontmatter.path}>
-        <img src={post.frontmatter.image}></img>
+        <img src={post.frontmatter.image} alt=''/>
       </Link>
     </div>
     <div className="textContainer">

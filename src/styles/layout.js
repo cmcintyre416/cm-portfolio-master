@@ -17,18 +17,17 @@ export const LayoutWrapper = styled.div`
       opacity: 1;
       max-height: 200px;
       transform: translateX(0);
-      transition: 1.5s ease;
+      transition: 1s ease;
     }
 
     .mainSocial {
       opacity: 1;
       transform: translateX(0);
-      transition: 1.5s ease;
+      transition: 1s ease;
     }
 }
 
 .closed {
-  /* transform: translateX(-200px); */
   width: 50px;
   transition: 1s ease;
 

@@ -37,11 +37,11 @@ export const HomePage = styled.div`
     opacity: 0.6;
 
     path {
-      stroke: ${darkHoverBlue};
-      fill:${darkBlue};
+      stroke: ${darkBlue};
       fill-opacity:0;
-      stroke-width:0.5;
-      stroke-dasharray: 700;
+      stroke-opacity: 0.6;
+      stroke-width:1;
+      stroke-dasharray: 1500;
       stroke-dashoffset:0;
       -moz-animation: strokeFill 20s linear infinite alternate-reverse;
       -webkit-animation: strokeFill 20s linear infinite alternate-reverse;

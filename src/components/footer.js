@@ -4,7 +4,7 @@ import { MainWrapper } from '../styles/containers';
 import { lightGrey } from '../styles/colours';
 
 const MainFooter = styled.div`
-
+  background-color: ${lightGrey};
 `;
 
 const Footer = ({ siteTitle }) => (

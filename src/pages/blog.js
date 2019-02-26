@@ -9,6 +9,8 @@ import { MainWrapper } from '../styles/containers';
 import {darkHoverBlue, darkBlue, mediumDarkBlue, mediumBlue, mediumLightBlue} from '../styles/colours';
 import styled from 'styled-components';
 
+import Icon from '../images/backgroundTopography.svg';
+
 const BlogPage = styled.div`
 
     background-color: #fafafa;
@@ -33,30 +35,62 @@ const BlogPage = styled.div`
 
 const ContentWrapper = styled.div`
   width: 70%;
-  margin: 50px auto;
+  margin: 60px auto;
   position: relative;
 `;
 
-const PageTitle = styled.h1`
-  font-size: 2.5rem;
-  color: black;
+const PageTitleHeader = styled.div`
   margin-bottom: 110px;
   position: relative;
+  background-color: ${darkHoverBlue};
+  padding: 50px 0;
+  border-radius: 5px;
+  background: linear-gradient(-45deg, ${darkHoverBlue}, ${darkBlue});
+  background-size: 650% 650%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
+  overflow: hidden;
 
-  &:after {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    content: "";
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: linear-gradient(-45deg, ${darkHoverBlue} ,${darkBlue}, ${mediumDarkBlue}, ${mediumBlue}, ${mediumLightBlue});
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 10s ease infinite;
-    -moz-animation: Gradient 10s ease infinite;
-    animation: Gradient 10s ease infinite;
+  p, h1, h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+.topBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  
+  path {
+    stroke: ${darkBlue};
+    fill:${darkBlue};
+    fill-opacity:0;
+    stroke-width:.2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset:1000;
+    -moz-animation: strokeFill 20s linear infinite alternate-reverse;
+    -webkit-animation: strokeFill 20s linear infinite alternate-reverse;
+    animation: strokeFill 20s linear infinite alternate-reverse;
+  }
+
+@keyframes strokeFill{
+  0%  {stroke-dashoffset:1000;}
+  80%  {stroke-dashoffset:0;fill-opacity:0;}
+  100%{stroke-dashoffset:0;fill-opacity:0.8;}
+}
+
+@-webkit-keyframes strokeFill{
+    0%  {stroke-dashoffset:1000;}
+    80%  {stroke-dashoffset:0;fill-opacity:0;}
+    100%{stroke-dashoffset:0;fill-opacity:0.8;}
+}
+@-moz-keyframes strokeFill{
+    0%  {stroke-dashoffset:1000;}
+    80%  {stroke-dashoffset:0;fill-opacity:0;}
+    100%{stroke-dashoffset:0;fill-opacity:0.8;}
 }
 
 @-webkit-keyframes Gradient {
@@ -84,16 +118,66 @@ const PageTitle = styled.h1`
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
+`;
+
+const PageTitle = styled.h1`
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 0.1rem;
+`;
+
+const PageSubTitle = styled.h2`
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  margin: 0;
+`;
+
+const PageDescription = styled.p`
+  font-size: 0.5rem;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  margin: 10px auto 0;
+  width: 200px;
+  position: relative;
+  line-height: 12px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 0.5px;
+    left: -50px;
+    top: 5px;
+    background-color: white;
+    opacity: 0.3;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 0.5px;
+    right: -50px;
+    top: 5px;
+    background-color: white;
+    opacity: 0.4;
   }
 `;
 
@@ -121,9 +205,12 @@ const Blog = ({
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>
-            <PageTitle>
-              Blog
-            </PageTitle>
+            <PageTitleHeader>
+              <PageTitle>Blog</PageTitle>
+              <PageSubTitle>Welcome to my blog.</PageSubTitle>
+              <PageDescription>Here are some of my dev thoughts and some cool things I've picked up on the way.</PageDescription>
+              <Icon className="topBackground"/>
+            </PageTitleHeader>
             <BlogPosts>
               {Posts}
             </BlogPosts>

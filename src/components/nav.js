@@ -48,7 +48,7 @@ export default class Nav extends React.Component {
 
   render(){
     return (
-      <Aside>
+      <Aside className="mainAside">
         <button onClick={this.toggleNav} className="minNavButton">
           <div className="line line1"></div>
           <div className="line line2"></div>

@@ -56,4 +56,68 @@ export const HomePage = styled.div`
     top: 0;
     transform: rotate(180deg);
   }
+
+  @media(max-width: 800px){
+    flex-direction: column;
+    
+    .navContainer {
+      width: 100%;
+      padding: 0;
+      justify-content: flex-start;
+    }
+
+    .mainNavWrapper {
+      padding: 0 25px;
+    }
+
+    .mainNav {
+      transform: translateY(0);
+    }
+
+    .closed {
+      width: 100%;
+      height: 50px
+    }
+
+    .mainAside {
+      padding: 25px;
+      position: relative;
+    }
+
+    .minNavButton {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 3px 5px lightgrey;
+
+
+      &:before {
+        content: none;
+      }
+
+      &:hover {
+        box-shadow: 0px 3px 5px lightgrey;
+      }
+    }
+
+    .mainSocial {
+      display: none;
+    }
+
+    .topographyBlue {
+      width: 300px;
+      height: 300px;
+      opacity: 0.8;
+    }
+
+    .contentWrapper {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+  }
 `;

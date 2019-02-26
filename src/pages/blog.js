@@ -65,12 +65,12 @@ const PageTitleHeader = styled.div`
   z-index: 1;
   
   path {
-    stroke: ${darkBlue};
+    stroke: ${darkHoverBlue};
     fill:${darkBlue};
     fill-opacity:0;
-    stroke-width:.2;
-    stroke-dasharray: 1000;
-    stroke-dashoffset:1000;
+    stroke-width:0.5;
+    stroke-dasharray: 700;
+    stroke-dashoffset:0;
     -moz-animation: strokeFill 20s linear infinite alternate-reverse;
     -webkit-animation: strokeFill 20s linear infinite alternate-reverse;
     animation: strokeFill 20s linear infinite alternate-reverse;
@@ -79,18 +79,18 @@ const PageTitleHeader = styled.div`
 @keyframes strokeFill{
   0%  {stroke-dashoffset:1000;}
   80%  {stroke-dashoffset:0;fill-opacity:0;}
-  100%{stroke-dashoffset:0;fill-opacity:0.8;}
+  100%{stroke-dashoffset:0;fill-opacity:0.6;}
 }
 
 @-webkit-keyframes strokeFill{
     0%  {stroke-dashoffset:1000;}
     80%  {stroke-dashoffset:0;fill-opacity:0;}
-    100%{stroke-dashoffset:0;fill-opacity:0.8;}
+    100%{stroke-dashoffset:0;fill-opacity:0.6;}
 }
 @-moz-keyframes strokeFill{
     0%  {stroke-dashoffset:1000;}
     80%  {stroke-dashoffset:0;fill-opacity:0;}
-    100%{stroke-dashoffset:0;fill-opacity:0.8;}
+    100%{stroke-dashoffset:0;fill-opacity:0.6;}
 }
 
 @-webkit-keyframes Gradient {

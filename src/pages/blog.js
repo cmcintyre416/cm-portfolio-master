@@ -76,56 +76,57 @@ const PageTitleHeader = styled.div`
     animation: strokeFill 20s linear infinite alternate-reverse;
   }
 
-@keyframes strokeFill{
-  0%  {stroke-dashoffset:1000;}
-  80%  {stroke-dashoffset:0;fill-opacity:0;}
-  100%{stroke-dashoffset:0;fill-opacity:0.6;}
-}
-
-@-webkit-keyframes strokeFill{
+  @keyframes strokeFill{
     0%  {stroke-dashoffset:1000;}
     80%  {stroke-dashoffset:0;fill-opacity:0;}
     100%{stroke-dashoffset:0;fill-opacity:0.6;}
-}
-@-moz-keyframes strokeFill{
-    0%  {stroke-dashoffset:1000;}
-    80%  {stroke-dashoffset:0;fill-opacity:0;}
-    100%{stroke-dashoffset:0;fill-opacity:0.6;}
-}
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%
   }
-  50% {
-    background-position: 100% 50%
+
+  @-webkit-keyframes strokeFill{
+      0%  {stroke-dashoffset:1000;}
+      80%  {stroke-dashoffset:0;fill-opacity:0;}
+      100%{stroke-dashoffset:0;fill-opacity:0.6;}
   }
-  100% {
-    background-position: 0% 50%
+  @-moz-keyframes strokeFill{
+      0%  {stroke-dashoffset:1000;}
+      80%  {stroke-dashoffset:0;fill-opacity:0;}
+      100%{stroke-dashoffset:0;fill-opacity:0.6;}
+  }
+
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
   }
 }
 `;

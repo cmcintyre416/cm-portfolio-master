@@ -36,7 +36,7 @@ export const HomePage = styled.div`
     position: absolute;
     opacity: 0.6;
 
-    path {
+    /* path {
       stroke: ${darkBlue};
       fill-opacity:0;
       stroke-opacity: 0.6;
@@ -52,7 +52,7 @@ export const HomePage = styled.div`
       0%  {stroke-dashoffset:1000;}
       90%  {stroke-dashoffset:0;fill-opacity:0;}
       100%{stroke-dashoffset:0;fill-opacity:0.6;}
-    }
+    } */
 
     @media(max-width: 1400px){
       width: 500px;

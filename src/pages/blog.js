@@ -70,6 +70,7 @@ const PageTitleHeader = styled.div`
     fill-opacity:0;
     stroke-width:0.4;
     stroke-dasharray: 700;
+    stroke-opacity: 0.3;
     stroke-dashoffset:0;
     -moz-animation: strokeFill 30s linear infinite alternate-reverse;
     -webkit-animation: strokeFill 30s linear infinite alternate-reverse;
@@ -90,41 +91,6 @@ const PageTitleHeader = styled.div`
       100%{stroke-dashoffset:0;}
   }
 
-  @-webkit-keyframes Gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @-moz-keyframes Gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @keyframes Gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
 }
 `;
 

@@ -1,10 +1,11 @@
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
 import React from "react";
 
 import styled from 'styled-components';
 import { MainWrapper } from '../styles/containers';
 import {darkBlue} from '../styles/colours';
+
+import CMLogo from '../images/cmLine.svg';
 
 const MainHeader = styled.div`
   background-color: white;
@@ -23,36 +24,53 @@ const MainHeader = styled.div`
     letter-spacing: 2px;
   }
   
-  a {
-    text-decoration: none;
-    color: black;
-  }
+  .animationLogo {
+    width: 80px;
 
-  .period {
-    color: ${darkBlue};
-    font-size: 2rem;
+    path {
+      stroke: #5272ef;
+      /* fill: none; */
+      stroke-dasharray: 2500;
+      opacity: 1;
+      animation: animate 2.5s cubic-bezier(0,0.23,1,.1) forwards;
+    }
+
+    @keyframes animate {
+      0% {
+        opacity: 0;
+        fill: 0;
+        stroke-dashoffset: 2500;
+      }
+      30% {
+        opacity: 1;
+        fill: none;
+      }
+      90% {
+        fill: #5272ef;
+        fill-opacity: 1;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        opacity: 1;
+        fill: #5272ef;
+        fill-opacity: 1;
+        stroke-dashoffset: 0;
+      }
+    }
   }
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <MainHeader className="header">
     <MainWrapper>
       <h1>
         <Link to='/'>
-          {siteTitle}
-          <span className="period">.</span>
+        <CMLogo className="animationLogo"/>
         </Link>
       </h1>
     </MainWrapper>
   </MainHeader>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``
-}
 
 export default Header

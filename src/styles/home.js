@@ -75,6 +75,7 @@ export const HomePage = styled.div`
     transform: rotate(180deg);
   }
 
+
   @media(max-width: 800px){
     flex-direction: column;
     

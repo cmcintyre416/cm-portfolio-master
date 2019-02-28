@@ -4,9 +4,10 @@ import { graphql } from 'gatsby';
 import PostLink from "../components/blogPosts";
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
+import Header from '../components/header';
 
 import { MainWrapper } from '../styles/containers';
-import {darkHoverBlue, darkBlue, mediumDarkBlue, mediumBlue, mediumLightBlue} from '../styles/colours';
+import {darkHoverBlue, darkBlue} from '../styles/colours';
 import styled from 'styled-components';
 
 import Icon from '../images/backgroundTopography.svg';
@@ -14,6 +15,18 @@ import Icon from '../images/backgroundTopography.svg';
 const BlogPage = styled.div`
 
     background-color: #fafafa;
+
+    .header {
+      min-height: auto;
+      text-align: center;
+      box-shadow: none;
+      background-color: transparent;
+      padding-top: 20px;
+
+      .animationLogo {
+        width: 50px;
+      }
+    }
 
     .blogNav {
       position: fixed;
@@ -163,6 +176,7 @@ const Blog = ({
   return (
     <>
       <BlogPage>
+        <Header/>
         <div className="navContainer blogNav">
           <Nav/>
         </div>

@@ -6,3 +6,9 @@ export const MainWrapper = styled.div`
     margin: 0 auto;
     padding: 0px 50px;
 `;
+
+export const ContentWrapper = styled.div`
+width: 70%;
+margin: 60px auto;
+position: relative;
+`;

@@ -35,9 +35,9 @@ const PostLink = ({ post }) => (
       </Link>
     </div>
     <div className="textContainer">
-        {/* <PostDate>
+        <PostDate>
           {post.frontmatter.date}
-        </PostDate> */}
+        </PostDate>
         <Link to={post.frontmatter.path}>
           {post.frontmatter.title}
         </Link>

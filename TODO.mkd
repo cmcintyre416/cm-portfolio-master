@@ -1,0 +1,32 @@
+Things to do for site
+
+Homepage
+- z-index fix for contact button (SVG is covering)
+- Center logo at top
+- Make navigation start as closed on small screen size
+
+Blog
+- Make responsive and make the navigation extend more of the width on mobile
+- Fix tiles
+
+Blog Post Page
+- Determing design for this
+
+Project Page
+- I want this coming through the CMS too and using the create page API
+- Similar layout to the blog page but tiles will look different
+- Need to also make template for all the project pages
+- Content for these needs to be done too
+
+About Me Page
+- Create this and have the same layout as the blog page
+- Have twitter feed pulled in
+- Pull in github commit data
+
+Skills Page 
+- Similar layout to other pages with lots of icons and filters
+
+Contact me page 
+- Add form
+
+

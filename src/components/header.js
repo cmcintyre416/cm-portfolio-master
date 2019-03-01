@@ -3,7 +3,6 @@ import React from "react";
 
 import styled from 'styled-components';
 import { MainWrapper } from '../styles/containers';
-import {darkBlue} from '../styles/colours';
 
 import CMLogo from '../images/cmLine.svg';
 
@@ -19,13 +18,10 @@ const MainHeader = styled.div`
   h1 {
     margin: 0;
     padding: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
   }
   
   .animationLogo {
-    width: 80px;
+    width: 70px;
 
     path {
       stroke: #5272ef;
@@ -65,7 +61,7 @@ const Header = () => (
     <MainWrapper>
       <h1>
         <Link to='/'>
-        <CMLogo className="animationLogo"/>
+        <CMLogo title="Colin Mcintyre" alt="Colin Mcintyre Logo" className="animationLogo"/>
         </Link>
       </h1>
     </MainWrapper>

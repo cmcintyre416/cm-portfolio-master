@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from 'styled-components';
-import { darkBlue, darkHoverBlue } from '../styles/colours';
+import { darkBlue } from '../styles/colours';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
    faHome
@@ -12,7 +12,7 @@ const BackHomeContainer = styled.div`
    position: absolute;
    top: -45px;
    left: 0px;
-   z-index: 1000;
+   z-index: 2;
 
     a {
         font-size: 0.8rem;

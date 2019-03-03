@@ -1,4 +1,4 @@
-import { darkBlue, lightBlue, darkHoverBlue } from '../styles/colours';
+import { darkBlue, lightBlue } from '../styles/colours';
 import styled from 'styled-components';
 
 export const HomePage = styled.div`
@@ -30,29 +30,21 @@ export const HomePage = styled.div`
     margin-bottom: 50px;
   }
 
+  a {
+    position: relative;
+    z-index: 6;
+  }
+
+  .home-contact-button {
+    position: static;
+    z-index: 60000;
+  }
+
   .topographyBlue {
     width: 700px;
     height: 700px;
     position: absolute;
     opacity: 0.6;
-
-    /* path {
-      stroke: ${darkBlue};
-      fill-opacity:0;
-      stroke-opacity: 0.6;
-      stroke-width:1;
-      stroke-dasharray: 1500;
-      stroke-dashoffset:0;
-      -moz-animation: strokeFill 20s linear infinite alternate-reverse;
-      -webkit-animation: strokeFill 20s linear infinite alternate-reverse;
-      animation: strokeFill 20s linear infinite alternate-reverse;
-    }
-
-    @keyframes strokeFill{
-      0%  {stroke-dashoffset:1000;}
-      90%  {stroke-dashoffset:0;fill-opacity:0;}
-      100%{stroke-dashoffset:0;fill-opacity:0.6;}
-    } */
 
     @media(max-width: 1400px){
       width: 500px;

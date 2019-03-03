@@ -23,7 +23,7 @@ export const Aside = styled.div`
     transform: translateY(-50%);
     height: 60px;
     width: 60px;
-    z-index: 500;
+    z-index: 5;
     background-color: white;
     border: none;
     border-radius: 50%;
@@ -47,7 +47,7 @@ export const Aside = styled.div`
       border-radius: 5px;
       background-color: ${darkBlue};
       margin: 3px 10px;
-      z-index: 501;
+      z-index: 6;
     }
 
     .line1 {

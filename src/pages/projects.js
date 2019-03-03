@@ -1,7 +1,5 @@
 import React from "react";
-import { graphql } from 'gatsby';
 
-import PostLink from "../components/blogPosts";
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
 import Header from '../components/header';
@@ -32,7 +30,7 @@ const ProjectPage = styled.div`
       top: 0;
       bottom: 0;
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-      z-index: 1000;
+      z-index: 4;
 
       .mainNavWrapper {
         padding-top: 100px;

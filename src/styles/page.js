@@ -14,9 +14,9 @@ export const PageTitleHeader = styled.div`
   animation: Gradient 20s ease infinite;
   overflow: hidden;
 
-  p, h1, h2 {
+  p, h1, h2, a {
     position: relative;
-    z-index: 2;
+    z-index: 4;
   }
 
 .topBackground {
@@ -24,7 +24,7 @@ export const PageTitleHeader = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 3;
   
   path {
     stroke: ${darkHoverBlue};

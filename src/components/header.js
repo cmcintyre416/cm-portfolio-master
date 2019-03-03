@@ -83,6 +83,10 @@ const MainHeader = styled.div`
         stroke-dashoffset: 0;
       }
     }
+
+    &:hover {
+      animation: animatePeriod 2.5s cubic-bezier(0,0.23,1,.1) forwards;
+    }
   }
 `;
 

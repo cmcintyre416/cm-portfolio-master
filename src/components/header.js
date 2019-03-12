@@ -90,11 +90,11 @@ const MainHeader = styled.div`
   }
 `;
 
-const Header = () => (
-  <MainHeader className="header">
+const Header = (props) => (
+  <MainHeader className={props.headerName}>
     <MainWrapper>
       <h1>
-        <Link to='/'>
+        <Link to={props.linkTo}>
         <CMLogo title="Colin Mcintyre" alt="Colin Mcintyre Logo" className="animationLogo"/>
         </Link>
       </h1>

@@ -13,7 +13,7 @@ import { HomePage } from '../styles/home';
 const IndexPage = () => (
     <>
       <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
-      <Header siteTitle='Colin Mcintyre'/>
+      <Header linkTo="/"/>
       <HomePage>
         <div className="navContainer">
           <Nav/>

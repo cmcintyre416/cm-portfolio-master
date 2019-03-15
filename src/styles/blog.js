@@ -30,6 +30,10 @@ export const BlogPage = styled.div`
       .minNavButton {
         box-shadow: 3px 0px 3px rgba(0,0,0,0.10), 3px 0px 3px rgba(0,0,0,0.20);
       }
+
+      @media(max-width: 900px){
+        display: none;
+      }
     }
 `;
 
@@ -37,4 +41,9 @@ export const BlogPosts = styled.div`
   display: grid;
   grid-template-columns: 31% 31% 31%;
   justify-content: space-between;
+  row-gap: 30px;
+
+  @media(max-width: 1200px){
+    grid-template-columns: 48% 48%;
+  }
 `;

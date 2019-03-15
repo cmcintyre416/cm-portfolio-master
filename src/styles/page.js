@@ -31,8 +31,8 @@ export const PageTitleHeader = styled.div`
     fill:${darkBlue};
     fill-opacity:0;
     stroke-width:0.4;
-    stroke-dasharray: 700;
-    stroke-opacity: 0.3;
+    stroke-dasharray: 1000;
+    stroke-opacity: 0.25;
     stroke-dashoffset:0;
     -moz-animation: strokeFill 30s linear infinite alternate-reverse;
     -webkit-animation: strokeFill 30s linear infinite alternate-reverse;

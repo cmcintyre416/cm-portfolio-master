@@ -98,6 +98,22 @@ _Now lets quickly explain the prefix's we will be using and the properties._
 
 **Webkit** is a rendering engine for browsers. You may have seen some prefixes used in css code before. These prefixes tell the browser how to process the code.
 
-Background-clip or webkit-background-clip allows you to change what is set as the background. If you set this to text, then it will allow you to set a manipulate the colour of your foreground, using the same css background property. 
+**Background-clip** or **webkit-background-clip** allows you to change what is set as the background. If you set this to text, then it will allow you to set a manipulate the colour of your foreground, using the same css background property. 
 
-Text-fill-color or webkit-text-fill-color is also needed to set the color for the text fill. If it is left unset then the css color property will be applied. To allow the linear-gradient to be seen instead of the default text fill we need to set it to transparent.
+**Text-fill-color** or **webkit-text-fill-color** is also needed to set the color for the text fill. If it is left unset then the css color property will be applied. To allow the linear-gradient to be seen instead of the default text fill we need to set it to transparent.
+
+> Lets start by adding a nice gradient as our background.
+
+```
+.cta-letter, .cta-letter-shadow { 
+       position: absolute; 
+       font-size: 200px; 
+       top: -60px; 
+       left: -20px; 
+       margin: 0; 
+       font-weight: bold; 
+       background: linear-gradient(45deg, orange 0%, #f9d423 100%);
+     } 
+```
+
+![Phase 2 of the effect.](/assets/letter-phase-2.png "Phase 2 effect image")

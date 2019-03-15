@@ -82,4 +82,14 @@ This should leave you with the following:
 
 **Step 3**
 
-Once you have added the base styling and html we can focus on the letter styling.
+Once you have added the base styling and html we can focus on the letter styling. The CSS properties we will be using to achieve this effect are : 
+
+* background-clip
+* text-fill-color
+
+These CSS properties work across your 'evergreen' browsers and sometimes even IE. If you are not using a preprocessor or automated prefixing tool then you will need to add them manually to make this effect work.
+
+If you have any doubts of using this in production please check: 
+
+* [background-clip browsers](https://caniuse.com/#search=background-clip)
+* [text-fill browsers](https://caniuse.com/#search=text-fill)

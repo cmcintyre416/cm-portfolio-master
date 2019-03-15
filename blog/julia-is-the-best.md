@@ -89,7 +89,15 @@ Once you have added the base styling and html we can focus on the letter styling
 
 These CSS properties work across your 'evergreen' browsers and sometimes even IE. If you are not using a preprocessor or automated prefixing tool then you will need to add them manually to make this effect work.
 
-If you have any doubts of using this in production please check: 
+If you have any doubts of using this in production purposes please check: 
 
 * [background-clip browsers](https://caniuse.com/#search=background-clip)
 * [text-fill browsers](https://caniuse.com/#search=text-fill)
+
+_Now lets quickly explain the prefix's we will be using and the properties._
+
+**Webkit** is a rendering engine for browsers. You may have seen some prefixes used in css code before. These prefixes tell the browser how to process the code.
+
+Background-clip or webkit-background-clip allows you to change what is set as the background. If you set this to text, then it will allow you to set a manipulate the colour of your foreground, using the same css background property. 
+
+Text-fill-color or webkit-text-fill-color is also needed to set the color for the text fill. If it is left unset then the css color property will be applied. To allow the linear-gradient to be seen instead of the default text fill we need to set it to transparent.

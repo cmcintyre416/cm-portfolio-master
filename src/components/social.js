@@ -10,7 +10,7 @@ import {
 
 const SocialMedia = styled.div`
     
-    /* max-height: 30px; */
+    max-height: 30px;
     overflow: hidden;
 
     a {

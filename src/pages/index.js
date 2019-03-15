@@ -13,7 +13,7 @@ import { HomePage } from '../styles/home';
 const IndexPage = () => (
     <>
       <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
-      <Header siteTitle='Colin Mcintyre'/>
+      <Header linkTo="/"/>
       <HomePage>
         <div className="navContainer">
           <Nav/>
@@ -22,7 +22,7 @@ const IndexPage = () => (
           <h2>Colin McIntyre</h2>
           <h3>Web Developer</h3>
           <Link to={'/contact/'}>
-            <BlueCta>Contact Me</BlueCta>
+            <BlueCta className="home-contact-button">Contact Me</BlueCta>
           </Link> 
           <Icon className="topographyBlue topographyBlue-bottom"/>
           <Icon className="topographyBlue topographyBlue-top"/>

@@ -1,22 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import Header from "../components/header";
 import Footer from '../components/footer';
 import Transition from '../components/transition';
 
 import "../styles/normalize.css";
 import { SiteWrapper, LayoutWrapper } from '../styles/layout';
-
-// import NProgress from 'nprogress';
-
-// const turbolinks = document.querySelectorAll('.turbolinks');
-
-// NProgress.start();
-
-// turbolinks.addEventListener('click', function(){
-//   NProgress.start();
-// });
 
 const Layout = ({ children, location }) => (
   <>
@@ -25,8 +13,8 @@ const Layout = ({ children, location }) => (
         <Transition location={location}>
           {children}
         </Transition>
-        <Footer/>
       </LayoutWrapper>
+        <Footer/>
     </SiteWrapper>
   </>
 );

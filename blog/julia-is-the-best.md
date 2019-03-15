@@ -14,15 +14,15 @@ We need some html to get started. Either copy this or apply it to your project.
 
 ```
 <div class="cta">
-    <div class="cta-letter-container">
-        <p class="cta-letter">J</p>
-        <p class="cta-letter-shadow">J</p>
-    </div>
-    <p class="cta-text">
-        <span class="cta-title">JavaScript</span>
-        <span class="cta-title-sub">My favourite programming language.</span>
-    </p>
-    <a class="cta-link">My Work</a>
+<div class="cta-letter-container">
+<p class="cta-letter">J</p>
+<p class="cta-letter-shadow">J</p>
+</div>
+<p class="cta-text">
+<span class="cta-title">JavaScript</span>
+<span class="cta-title-sub">My favourite programming language.</span>
+</p>
+<a class="cta-link">My Work</a>
 </div>
 ```
 
@@ -32,7 +32,48 @@ Once you have added the code from above to your project we will also need to add
 
 ```
 .cta { 
-font-family: Arial; position: relative; background-color: white; box-shadow: 0px 5px 10px lightgrey; padding: 25px; width: 500px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;} .cta-letter-container {width: 80px;} .cta-letter, .cta-letter-shadow { position: absolute; font-size: 200px; top: -60px; left: -20px; margin: 0; font-weight: bold; } .cta-text { display: flex; flex-direction: column; width: 200px;}.cta-title {margin-bottom: 10px; font-weight: bold; font-size: 20px; } .cta-link { padding: 10px 20px; background-color: gold; border-radius: 5px; }
+font-family: Arial; 
+position: relative; 
+background-color: white; 
+box-shadow: 0px 5px 10px lightgrey; 
+padding: 25px; width: 500px; 
+margin: 0 auto; 
+display: flex; 
+align-items: center; 
+justify-content: 
+space-between;
+} 
+
+.cta-letter-container {
+width: 80px;
+} 
+
+.cta-letter, .cta-letter-shadow { 
+position: absolute; 
+font-size: 200px; 
+top: -60px; 
+left: -20px; 
+margin: 0; 
+font-weight: bold; 
+} 
+
+.cta-text { 
+display: flex; 
+flex-direction: column; 
+width: 200px;
+}
+
+.cta-title {
+margin-bottom: 10px; 
+font-weight: bold; 
+font-size: 20px; 
+} 
+
+.cta-link { 
+padding: 10px 20px; 
+background-color: gold; 
+border-radius: 5px; 
+}
 ```
 
 This should leave you with the following: 

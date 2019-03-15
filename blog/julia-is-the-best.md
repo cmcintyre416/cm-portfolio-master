@@ -32,48 +32,48 @@ Once you have added the code from above to your project we will also need to add
 
 ```
 .cta { 
-     font-family: Arial; 
-     position: relative; 
-     background-color: white; 
-     box-shadow: 0px 5px 10px lightgrey; 
-     padding: 25px; width: 500px; 
-     margin: 0 auto; 
-     display: flex; 
-     align-items: center; 
-     justify-content: 
-     space-between;
+       font-family: Arial; 
+       position: relative; 
+       background-color: white; 
+       box-shadow: 0px 5px 10px lightgrey; 
+       padding: 25px; width: 500px; 
+       margin: 0 auto; 
+       display: flex; 
+       align-items: center; 
+       justify-content: 
+       space-between;
      } 
 
-.cta-letter-container {
-width: 80px;
-} 
+     .cta-letter-container {
+       width: 80px;
+     } 
 
-.cta-letter, .cta-letter-shadow { 
-position: absolute; 
-font-size: 200px; 
-top: -60px; 
-left: -20px; 
-margin: 0; 
-font-weight: bold; 
-} 
+     .cta-letter, .cta-letter-shadow { 
+       position: absolute; 
+       font-size: 200px; 
+       top: -60px; 
+       left: -20px; 
+       margin: 0; 
+       font-weight: bold; 
+     } 
 
-.cta-text { 
-display: flex; 
-flex-direction: column; 
-width: 200px;
-}
+     .cta-text { 
+       display: flex; 
+       flex-direction: column; 
+       width: 200px;
+     }
 
-.cta-title {
-margin-bottom: 10px; 
-font-weight: bold; 
-font-size: 20px; 
-} 
+     .cta-title {
+       margin-bottom: 10px; 
+       font-weight: bold; 
+       font-size: 20px; 
+     } 
 
-.cta-link { 
-padding: 10px 20px; 
-background-color: gold; 
-border-radius: 5px; 
-}
+     .cta-link { 
+       padding: 10px 20px; 
+       background-color: gold; 
+       border-radius: 5px; 
+     }
 ```
 
 This should leave you with the following: 

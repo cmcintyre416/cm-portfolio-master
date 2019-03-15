@@ -23,7 +23,7 @@ We need some html to get started. Either copy this or apply it to your project.
          <span class="cta-title-sub">My favourite programming language.</span>
        </p>
        <a class="cta-link">My Work</a>
-</div>
+     </div>
 ```
 
 **Step 2**

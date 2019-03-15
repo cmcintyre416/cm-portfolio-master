@@ -13,47 +13,7 @@ Today I'm going to show you how to apply subtle gradient styles to text to creat
 We need some html to get started. Either copy this or apply it to your project.
 
 ```
-<div class="CTA">
-```
-
-```
-            <div class="CTA-letter-container">
-```
-
-```
-              <p class="CTA-letter">J</p>
-```
-
-```
-              <p class="CTA-letter-shadow">J</p>
-```
-
-```
-            </div>
-```
-
-```
-            <p class="CTA-text">
-```
-
-```
-              <span class="CTA-title">JavaScript</span>
-```
-
-```
-              <span class="CTA-title-sub">My favourite programming language.</span>
-```
-
-```
-            </p>
-```
-
-```
-            <a class="CTA-link">My Work</a
-```
-
-```
-</div>
+<div class="cta">    <div class="cta-letter-container">         <p class="cta-letter">J</p>         <p class="cta-letter-shadow">J</p>    </div>    <p class="cta-text">         <span class="cta-title">JavaScript</span>         <span class="cta-title-sub">My favourite programming language.</span>    </p>    <a class="cta-link">My Work</a></div>
 ```
 
 **Step 2**

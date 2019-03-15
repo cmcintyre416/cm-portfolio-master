@@ -32,17 +32,17 @@ Once you have added the code from above to your project we will also need to add
 
 ```
 .cta { 
-font-family: Arial; 
-position: relative; 
-background-color: white; 
-box-shadow: 0px 5px 10px lightgrey; 
-padding: 25px; width: 500px; 
-margin: 0 auto; 
-display: flex; 
-align-items: center; 
-justify-content: 
-space-between;
-} 
+     font-family: Arial; 
+     position: relative; 
+     background-color: white; 
+     box-shadow: 0px 5px 10px lightgrey; 
+     padding: 25px; width: 500px; 
+     margin: 0 auto; 
+     display: flex; 
+     align-items: center; 
+     justify-content: 
+     space-between;
+     } 
 
 .cta-letter-container {
 width: 80px;

@@ -1,6 +1,6 @@
 ---
 path: /creating-a-modern-cta/
-date: '2019-02-23 10:11'
+date: 2019-03-15T04:00:00.000Z
 title: Creating a modern 'Call to action' to display on your portfolio site
 image: /assets/cta-modern.png
 ---

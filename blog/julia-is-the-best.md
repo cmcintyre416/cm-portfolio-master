@@ -1,7 +1,7 @@
 ---
 path: /creating-a-modern-cta/
 date: 2019-03-15T04:00:00.000Z
-title: Creating a modern 'Call to action' to display on your portfolio site
+title: Creating a modern 'call to action' to display on your portfolio site
 image: /assets/cta-modern.png
 ---
 With many portfolio sites on the internet, sometimes it is great to add something that helps drive people to your content, specifically your projects.
@@ -113,7 +113,23 @@ _Now lets quickly explain the prefix's we will be using and the properties._
        margin: 0; 
        font-weight: bold; 
        background: linear-gradient(45deg, orange 0%, #f9d423 100%);
+       -webkit-background-clip: text;
      } 
 ```
 
 ![Phase 2 of the effect.](/assets/letter-phase-2.png "Phase 2 effect image")
+
+> Now let's use the the background-clip property to clip the background.
+
+```
+.cta-letter, .cta-letter-shadow { 
+       position: absolute; 
+       font-size: 200px; 
+       top: -60px; 
+       left: -20px; 
+       margin: 0; 
+       font-weight: bold; 
+       background: linear-gradient(45deg, orange 0%, #f9d423 100%);
+       -webkit-background-clip: text;
+     } 
+```

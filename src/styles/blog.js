@@ -43,7 +43,7 @@ export const BlogPosts = styled.div`
   justify-content: space-between;
   row-gap: 30px;
 
-  @media(max-width: 1200px){
+  @media(max-width: 1400px){
     grid-template-columns: 48% 48%;
   }
 `;

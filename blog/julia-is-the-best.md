@@ -2,7 +2,7 @@
 path: /creating-a-modern-cta/
 date: 2019-03-15T04:00:00.000Z
 title: Creating a modern 'call to action' to display on your portfolio site
-image: /assets/cta-modern.png
+image: /assets/letter-blog-thumbnail.png
 ---
 With many portfolio sites on the internet, sometimes it is great to add something that helps drive people to your content, specifically your projects.
 
@@ -15,8 +15,8 @@ We need some html to get started. Either copy this or apply it to your project.
 ```
 <div class="cta">
        <div class="cta-letter-container">
-         <p class="cta-letter">J</p>
          <p class="cta-letter-shadow">J</p>
+         <p class="cta-letter">J</p>
        </div>
        <p class="cta-text">
          <span class="cta-title">JavaScript</span>
@@ -113,13 +113,16 @@ _Now lets quickly explain the prefix's we will be using and the properties._
        margin: 0; 
        font-weight: bold; 
        background: linear-gradient(45deg, orange 0%, #f9d423 100%);
-       -webkit-background-clip: text;
      } 
 ```
 
 ![Phase 2 of the effect.](/assets/letter-phase-2.png "Phase 2 effect image")
 
-> Now let's use the the background-clip property to clip the background.
+> Now let's use the the **background-clip** property to clip / remove the background that is not behind the letter. Remember to use webkit prefix or make sure your css processor is adding it for you. 
+>
+> After you apply this you will see the background disappear cause it has been clipped.
+>
+> Then we will also add the property of text-fill-color to remove the colour of the inside of the letter. Remember to add a -webkit prefix on this!
 
 ```
 .cta-letter, .cta-letter-shadow { 
@@ -131,5 +134,34 @@ _Now lets quickly explain the prefix's we will be using and the properties._
        font-weight: bold; 
        background: linear-gradient(45deg, orange 0%, #f9d423 100%);
        -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
      } 
 ```
+
+Once this is done lets apply a shadow on the back letter.
+
+```
+.cta-letter-shadow { 
+       text-shadow: 5px 5px 10px lightgrey;
+     } 
+```
+
+This should give us a unique and modern CTA for your portfolio.
+
+![Letter phase 3 styling.](/assets/letter-phase-3.png "Letter phase 3")
+
+Thanks for reading! 
+
+> _**p.s. -** This was mainly a way to test the connection of my new CMS to my Gatsby site. Let me know if you want me to write a tutorial on how I made and setup this blog._
+>
+> \
+>
+>
+> __
+>
+> \
+>
+>
+> - 
+>
+> _Colin_

@@ -154,14 +154,4 @@ Thanks for reading!
 
 > _**p.s. -** This was mainly a way to test the connection of my new CMS to my Gatsby site. Let me know if you want me to write a tutorial on how I made and setup this blog._
 >
-> \
->
->
-> __
->
-> \
->
->
-> - 
->
 > _Colin_

@@ -21,9 +21,9 @@ const IndexPage = () => (
         <div className="contentWrapper">
           <h2>Colin McIntyre</h2>
           <h3>Web Developer</h3>
-          <Link to={'/contact/'}>
+          {/* <Link to={'/contact/'}>
             <BlueCta className="home-contact-button">Contact Me</BlueCta>
-          </Link> 
+          </Link>  */}
           <Icon className="topographyBlue topographyBlue-bottom"/>
           <Icon className="topographyBlue topographyBlue-top"/>
         </div>

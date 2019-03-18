@@ -40,10 +40,6 @@ const BlogTemplate = styled.div`
   }
 `;
 
-const BlogTextWrapper = styled.div`
-
-`;
-
 const BackToBlog = styled.div`
 
   margin-bottom: 15px;

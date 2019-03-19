@@ -46,13 +46,6 @@ module.exports = {
         name: "markdown-pages",
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "skills",
-        path: `${__dirname}/skills`,
-      },
-    },
     `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-react-svg',

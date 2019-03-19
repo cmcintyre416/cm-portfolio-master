@@ -5,7 +5,7 @@ import Nav from '../components/nav';
 import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
-import SkillsPosts from '../components/skillsPosts';
+// import SkillsPosts from '../components/skillsPosts';
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import styled from 'styled-components';
@@ -14,11 +14,7 @@ const SkillsPage = styled.div`
 
 `;
 
-const Skills = ({data}) => {
-  console.log(data);
-  const Skills = data.allFile.edges
-    .map(edge => <SkillsPosts key={edge.node.id} skill={edge.node}></SkillsPosts>)
-
+const Skills = () => {
   return (
     <>
       <SkillsPage>

@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from 'gatsby';
 
-import PostLink from "../components/blogPosts";
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
 import Header from '../components/header';
@@ -20,8 +19,7 @@ const Skills = ({
   },
 }) => {
   const Skills = edges
-    .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <div key={edge.node.id} post={edge.node}></div>)
 
   return (
     <>
@@ -44,13 +42,16 @@ export default Skills;
 
 export const pageQuery = graphql`
   query {
-    {
-      allFile(filter: { sourceInstanceName: { eq: "skills" } }) {
-        edges {
-          node {
-            extension
-            dir
-            modifiedTime
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 80)
+          frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              path
+              image
           }
         }
       }

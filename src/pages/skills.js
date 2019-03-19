@@ -5,6 +5,7 @@ import Nav from '../components/nav';
 import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
+import SkillsPosts from '../components/skillsPosts';
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import styled from 'styled-components';
@@ -13,13 +14,10 @@ const SkillsPage = styled.div`
 
 `;
 
-const Skills = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Skills = edges
-    .map(edge => <div key={edge.node.id} post={edge.node}></div>)
+const Skills = ({data}) => {
+  console.log(data);
+  const Skills = data.allFile.edges
+    .map(edge => <SkillsPosts key={edge.node.id} skill={edge.node}></SkillsPosts>)
 
   return (
     <>
@@ -42,17 +40,10 @@ export default Skills;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allFile(filter: { sourceInstanceName: { eq: "skills" } }) {
       edges {
         node {
-          id
-          excerpt(pruneLength: 80)
-          frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              path
-              image
-          }
+          name
         }
       }
     }

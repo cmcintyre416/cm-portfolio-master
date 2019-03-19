@@ -21,7 +21,6 @@ collections:
     label: Skills
     folder: skills
     create: true
-    extension: json
     fields:
       - { name: title, label: Title}
       - { name: subTitle, label: Sub Title}

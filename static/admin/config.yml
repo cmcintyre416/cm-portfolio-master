@@ -16,3 +16,22 @@ collections:
       - { name: title, label: Title}
       - { name: image, label: Image, widget: image, required: true}
       - { name: body, label: Body, widget: markdown }
+
+  - name: skills
+    label: Skills
+    folder: skills
+    create: true
+    fields:
+      - { name: title, label: Title}
+      - { name: subTitle, label: Sub Title}
+      - { name: image, label: Image, widget: image, required: false}
+      - { name: description, label: Skill Description, widget: string }
+      - label: "Main Skill Tag"
+        name: "mainTag"
+        widget: "select"
+        options:
+          - { label: CSS, value: css }
+          - { label: JS, value: js }
+          - { label: Tools, value: tools }
+          - { label: Systems, value: systems }
+          - { label: Other, value: other }

@@ -19,7 +19,7 @@ const Skills = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const Posts = edges
+  const Skills = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
@@ -31,7 +31,8 @@ const Skills = ({
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>
-              <PageTitles pageTitle='Skills'/>
+            <PageTitles pageTitle='Skills'/>
+            {Skills}
           </ContentWrapper>
         </MainWrapper>
       </SkillsPage>
@@ -43,16 +44,13 @@ export default Skills;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 80)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            path
-            image
+    {
+      allFile(filter: { sourceInstanceName: { eq: "skills" } }) {
+        edges {
+          node {
+            extension
+            dir
+            modifiedTime
           }
         }
       }

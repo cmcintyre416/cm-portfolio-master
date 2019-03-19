@@ -46,9 +46,9 @@ export default class Nav extends React.Component {
 
   }
 
-  render(){
+  render(props){
     return (
-      <Aside className="mainAside">
+      <Aside className={`${this.props.navType} mainAside navContainer`}>
         <button onClick={this.toggleNav} className="minNavButton">
           <div className="line line1"></div>
           <div className="line line2"></div>

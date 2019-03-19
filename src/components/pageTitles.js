@@ -6,8 +6,8 @@ const PageTitles = (props) => (
     <>
     <PageTitleHeader>
         <PageTitle>{props.pageTitle}</PageTitle>
-        <PageSubTitle>{props.pageSub}</PageSubTitle>
-        <PageDescription>{props.pageDescription}</PageDescription>
+        <PageSubTitle className={!props.pageSub && 'hideText'}>{props.pageSub}</PageSubTitle>
+        <PageDescription className={!props.pageDescription && 'hideText'}>{props.pageDescription}</PageDescription>
         <Icon className="topBackground"/>
     </PageTitleHeader>
     </>

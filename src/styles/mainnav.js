@@ -81,6 +81,26 @@ export const Aside = styled.div`
       }
     }
   }
+
+  &.fixedNav {
+    position: fixed;
+      top: 0;
+      bottom: 0;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      z-index: 4;
+
+      .mainNavWrapper {
+        padding-top: 100px;
+      }
+      
+      .minNavButton {
+        box-shadow: 3px 0px 3px rgba(0,0,0,0.10), 3px 0px 3px rgba(0,0,0,0.20);
+      }
+
+      @media(max-width: 900px){
+        display: none;
+      }
+  }
 `;
 
 export const MainNav = styled.nav`
@@ -100,3 +120,8 @@ export const MainNav = styled.nav`
     }
   }
 `;
+
+export const FixedNavWrapper = styled.div`
+    
+`;
+

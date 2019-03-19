@@ -54,6 +54,10 @@ export const PageTitleHeader = styled.div`
   }
 
 }
+
+.hideText {
+    display: none;
+  }
 `;
 
 export const PageTitle = styled.h1`
@@ -105,4 +109,6 @@ export const PageDescription = styled.p`
     background-color: white;
     opacity: 0.5;
   }
+
+  
 `;

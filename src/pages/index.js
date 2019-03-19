@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 import SEO from "../components/seo";
 import Nav from '../components/nav';
@@ -7,7 +7,7 @@ import Header from '../components/header';
 
 import Icon from '../images/topographyBlue.svg';
 
-import { BlueCta } from '../styles/buttons';
+// import { BlueCta } from '../styles/buttons';
 import { HomePage } from '../styles/home';
 
 const IndexPage = () => (

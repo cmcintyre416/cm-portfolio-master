@@ -22,10 +22,8 @@ const Blog = ({
   return (
     <>
       <BlogPage>
-        <Header headerName="blogHomeHeader" linkTo="/"/>
-        <div className="navContainer blogNav">
-          <Nav/>
-        </div>
+        <Header headerName="simpleHeader" linkTo="/"/>
+        <Nav navType="fixedNav"/>
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>

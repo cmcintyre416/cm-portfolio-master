@@ -15,7 +15,6 @@ const SkillsPage = styled.div`
 `;
 
 const Skills = ({data}) => {
-  console.log(data.allSkillsJson.edges);
   const Skills = data.allSkillsJson.edges
     .map(edge => <SkillsPosts key={edge.node.id} skill={edge.node}/>)
   return (

@@ -1,9 +1,10 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faJs, faCss3 } from '@fortawesome/free-brands-svg-icons' 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faJs, faCss3 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(faReact, faJs, faCss3);
 
@@ -20,20 +21,24 @@ const SkillContainer = styled.div`
 
 `;
 
-const SkillsPosts = ({skill}) => (
-  <SkillContainer>
-    <div className="skillLogoWrapper">
-      {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
-      <p>{skill.title}</p>
-    </div>
-    <div className="skillViewWrapper">
-      {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
-      <p>{skill.title}</p>
-      <p>{skill.subTitle}</p>
-      <p>{skill.mainTag}</p>
-      <p>{skill.description}</p>
-    </div>
-  </SkillContainer>
-)
+const SkillsPosts = ({skill}) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <SkillContainer>
+      <div className="skillLogoWrapper" onClick={() => setOpen(!open)}>
+        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+        <p>{skill.title}</p>
+      </div>
+      <div className={`skillViewWrapper  ${open ? 'openView' : 'closeView'}`}>
+        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+        <p>{skill.title}</p>
+        <p>{skill.subTitle}</p>
+        <p>{skill.mainTag}</p>
+        <p>{skill.description}</p>
+      </div>
+    </SkillContainer>
+  );
+}
 
 export default SkillsPosts;

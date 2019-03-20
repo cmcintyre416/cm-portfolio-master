@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faJs, faCss } from '@fortawesome/free-brands-svg-icons' 
+import { faReact, faJs, faCss3 } from '@fortawesome/free-brands-svg-icons' 
 
-library.add(faReact, faJs, faCss);
+library.add(faReact, faJs, faCss3);
 
 
 const PostContainer = styled.div`
@@ -49,7 +49,7 @@ const SkillsPosts = ({skill}) => (
     <p>{skill.subTitle}</p>
     <p>{skill.description}</p>
     <p>{skill.mainTag}</p>
-    <FontAwesomeIcon icon={['fab', `${skill.icon}`]} />
+    {skill.icon != '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
   </PostContainer>
 )
 

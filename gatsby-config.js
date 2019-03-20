@@ -46,6 +46,14 @@ module.exports = {
         name: "markdown-pages",
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./skills/`,
+        typeName: 'Json',
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-react-svg',

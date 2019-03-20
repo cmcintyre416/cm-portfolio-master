@@ -23,6 +23,7 @@
     "gatsby-plugin-sharp": "^2.0.29",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-remark": "^2.3.4",
     "gatsby-transformer-sharp": "^2.1.17",
     "netlify-cms": "^2.6.1",

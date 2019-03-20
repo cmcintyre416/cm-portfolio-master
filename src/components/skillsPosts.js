@@ -36,9 +36,12 @@ const PostContainer = styled.div`
     }
 `;
 
-const PostLink = ({post}) => (
+const PostLink = ({skill}) => (
   <PostContainer>
-    <p>{post.name}</p>
+    <p>{skill.title}</p>
+    <p>{skill.subTitle}</p>
+    <p>{skill.description}</p>
+    <p>{skill.mainTag}</p>
   </PostContainer>
 )
 

@@ -5,7 +5,7 @@ import Nav from '../components/nav';
 import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
-// import SkillsPosts from '../components/skillsPosts';
+import SkillsPosts from '../components/skillsPosts';
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import styled from 'styled-components';
@@ -14,7 +14,10 @@ const SkillsPage = styled.div`
 
 `;
 
-const Skills = () => {
+const Skills = ({data}) => {
+  console.log(data.allSkillsJson.edges[0].node);
+  const Skills = data.allSkillsJson.edges
+    .map(edge => <SkillsPosts key={edge.node.id} skill={edge.node}/>)
   return (
     <>
       <SkillsPage>
@@ -36,10 +39,13 @@ export default Skills;
 
 export const pageQuery = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "skills" } }) {
+    allSkillsJson {
       edges {
         node {
-          name
+          title
+          subTitle
+          description
+          mainTag
         }
       }
     }

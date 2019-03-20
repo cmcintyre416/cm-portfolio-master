@@ -25,7 +25,7 @@ collections:
     fields:
       - { name: title, label: Title}
       - { name: subTitle, label: Sub Title}
-      - { name: image, label: Image, widget: image, required: false}
+      - { name: icon, label: Font awesome icon name, widget: string }
       - { name: description, label: Skill Description, widget: string }
       - label: "Main Skill Tag"
         name: "mainTag"

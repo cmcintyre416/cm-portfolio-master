@@ -42,6 +42,7 @@ const PostLink = ({skill}) => (
     <p>{skill.subTitle}</p>
     <p>{skill.description}</p>
     <p>{skill.mainTag}</p>
+    <p>{skill.image}</p>
   </PostContainer>
 )
 

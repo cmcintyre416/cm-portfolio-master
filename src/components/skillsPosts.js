@@ -8,7 +8,7 @@ import { faReact, faJs, faCss3 } from '@fortawesome/free-brands-svg-icons'
 library.add(faReact, faJs, faCss3);
 
 
-const PostContainer = styled.div`
+const SkillContainer = styled.div`
     background-color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -18,39 +18,22 @@ const PostContainer = styled.div`
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 
-    .imageContainer {
-      overflow: hidden;
-      border-radius: 5px;
-      
-      img {
-        margin: 0;
-      }
-    }
-
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        color: black;
-      }
-    }
 `;
 
 const SkillsPosts = ({skill}) => (
-  <PostContainer>
-    <p>{skill.title}</p>
-    <p>{skill.subTitle}</p>
-    <p>{skill.description}</p>
-    <p>{skill.mainTag}</p>
-    {skill.icon != '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
-  </PostContainer>
+  <SkillContainer>
+    <div className="skillLogoWrapper">
+      {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+      <p>{skill.title}</p>
+    </div>
+    <div className="skillViewWrapper">
+      {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+      <p>{skill.title}</p>
+      <p>{skill.subTitle}</p>
+      <p>{skill.mainTag}</p>
+      <p>{skill.description}</p>
+    </div>
+  </SkillContainer>
 )
 
 export default SkillsPosts;

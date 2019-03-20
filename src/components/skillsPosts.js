@@ -1,6 +1,13 @@
 import React from "react";
 import styled from 'styled-components';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faJs, faCss } from '@fortawesome/free-brands-svg-icons' 
+
+library.add(faReact, faJs, faCss);
+
+
 const PostContainer = styled.div`
     background-color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -36,14 +43,14 @@ const PostContainer = styled.div`
     }
 `;
 
-const PostLink = ({skill}) => (
+const SkillsPosts = ({skill}) => (
   <PostContainer>
     <p>{skill.title}</p>
     <p>{skill.subTitle}</p>
     <p>{skill.description}</p>
     <p>{skill.mainTag}</p>
-    <p>{skill.image}</p>
+    <FontAwesomeIcon icon={['fab', `${skill.icon}`]} />
   </PostContainer>
 )
 
-export default PostLink;
+export default SkillsPosts;

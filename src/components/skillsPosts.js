@@ -54,11 +54,11 @@ const SkillsPosts = ({skill}) => {
   return (
     <SkillContainer>
       <div className="skillLogoWrapper" onClick={() => setOpen(!open)}>
-        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon]} /> : 'Icon Not Found'}
         <p>{skill.title}</p>
       </div>
       <div className={`skillViewWrapper  ${open ? 'openView' : 'closeView'}`}>
-        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon ? skill.icon : "js"]} /> : 'Icon Not Found'}
+        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon]} /> : 'Icon Not Found'}
         <p>{skill.title}</p>
         <p>{skill.subTitle}</p>
         <p>{skill.mainTag}</p>

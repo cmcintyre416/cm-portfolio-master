@@ -6,7 +6,6 @@ import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
 import SkillsPosts from '../components/skillsPosts';
-import { darkHoverBlue } from '../styles/colours';
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import styled from 'styled-components';

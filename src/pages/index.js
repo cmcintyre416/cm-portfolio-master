@@ -15,9 +15,7 @@ const IndexPage = () => (
       <SEO title="Home" keywords={[`Web Developer`, `Front end`, `React`, `Gatsby`]} />
       <Header linkTo="/"/>
       <HomePage>
-        <div className="navContainer">
           <Nav/>
-        </div>
         <div className="contentWrapper">
           <h2>Colin McIntyre</h2>
           <h3>Web Developer</h3>

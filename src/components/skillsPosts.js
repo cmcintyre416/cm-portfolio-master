@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJs, faCss3 } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faJs, faCss3, faJquery, faSass } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faReact, faJs, faCss3);
+library.add(faReact, faJs, faCss3, faJquery, faSass);
 
 
 const SkillContainer = styled.div`

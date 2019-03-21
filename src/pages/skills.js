@@ -56,7 +56,7 @@ const Skills = ({data}) => {
           <PageTitles pageTitle='Skills'/>
           <SkillsFilters>
             <div className="selectorContainer">
-              <label for="selectSkillTag">Skill Tag</label>
+              <label htmlFor="selectSkillTag">Skill Tag</label>
               <select name="selectSkillTag">
                 <option value=""></option>
                 <option value=""></option>
@@ -65,7 +65,7 @@ const Skills = ({data}) => {
               </select>
             </div>
             <form id="skillForm">
-              <label for="searchSkill">Skill Tag</label>
+              <label htmlFor="searchSkill">Skill Tag</label>
               <input type="text" name="searchSkill"/>
             </form>
           </SkillsFilters>

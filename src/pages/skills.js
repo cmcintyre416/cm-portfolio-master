@@ -10,40 +10,7 @@ import SkillsPosts from '../components/skillsPosts';
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
-import styled from 'styled-components';
-
-const SkillsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 30px;
-  row-gap: 30px;
-`;
-
-const SkillsFilters = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 50px;
-  position: relative;
-
-  .selectorContainer {
-    label {
-      margin-right: 20px;
-    }
-  }
-
-  form {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-
-    label {
-      margin-right: 20px;
-    }
-  }
-`;
+import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');

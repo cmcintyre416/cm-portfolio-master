@@ -14,18 +14,25 @@ import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
+  const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState(data.allSkillsJson.edges);
   
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };
+
+  const handleSelectChange = event => {
+    setTagSelect(event.target.value);
+  };
   
   const filteredList = initialList.filter(item => {
-    return item.node.title.toLowerCase().includes(filterText.toLowerCase());
+    return item.node.title.toLowerCase().includes(filterText.toLowerCase()) && item.node.mainTag.toLowerCase().includes(tagSelect.toLowerCase());
+    
   });
 
   const Skills = filteredList
   .map(edge => <SkillsPosts key={edge.node.id} skill={edge.node}/>);
+
   return (
     <>
       <Header headerName="simpleHeader" linkTo="/"/>
@@ -37,7 +44,7 @@ const Skills = ({data}) => {
           <SkillsFilters>
             <div className="selectorContainer">
               <label htmlFor="selectSkillTag">Skill Tag</label>
-              <select name="selectSkillTag">
+              <select name="selectSkillTag" value={tagSelect} onChange={handleSelectChange}>
                 {skillTags.map(tag => <option value={tag.value}>{tag.label}</option>)}
               </select>
             </div>

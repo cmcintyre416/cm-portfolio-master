@@ -52,7 +52,7 @@ const Skills = filteredList.map( (edge, i) => {
               </select>
             </div>
             <form id="skillForm">
-              <label htmlFor="searchSkill">Skill Tag</label>
+              <label htmlFor="searchSkill">Search</label>
               <input type="text" name="searchSkill" onChange={handleFilterChange} value={filterText}/>
             </form>
           </SkillsFilters>

@@ -8,7 +8,6 @@ import { SkillContainer } from "../styles/skills.js";
 
 library.add(faReact, faJs, faCss3, faSass);
 
-
 const SkillsPosts = ({skill}) => {
   const [open, setOpen] = useState(false);
 

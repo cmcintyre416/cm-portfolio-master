@@ -17,6 +17,8 @@ export const SkillsFilters = styled.div`
   position: relative;
 
   .selectorContainer {
+    position: relative;
+    
     label {
       margin-right: 20px;
     }

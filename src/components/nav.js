@@ -57,10 +57,10 @@ export default class Nav extends React.Component {
         </button>
         <MainWrapper className="mainNavWrapper">
           <MainNav className="mainNav">
-            {navItems.map(item => {
+            {navItems.map((item, i) => {
               return <Link 
                 to={item.link}
-                key={item.id}  
+                key={`key-${i}`}  
                 activeStyle={
                   {
                     transition: `0.5s ease`,

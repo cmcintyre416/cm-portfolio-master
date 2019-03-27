@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from 'gatsby';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
@@ -10,13 +10,30 @@ import SkillsPosts from '../components/skillsPosts';
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
-import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
+import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList] = useState(data.allSkillsJson.edges);
+  const [gitContentLoaded, setGitLoaded] = useState(false);
+  const [githubResults, setGithubResults] = useState('');
   
+  useEffect(() => {
+    fetch('https://github.com/cmcintyre416/cm-portfolio-master/commits/master.atom')
+      .then(
+        (result) => {
+          console.log(result);
+          setGitLoaded(true);
+          setGithubResults(githubResults = result);
+        },
+        (error) => {
+          setGitLoaded(true);
+          console.log(error);
+        }
+      )
+  });
+
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };
@@ -59,6 +76,9 @@ const Skills = filteredList.map( (edge, i) => {
           <SkillsContainer>
             {Skills} 
           </SkillsContainer>
+          <GithubTracker>
+            
+          </GithubTracker>
         </ContentWrapper>
       </MainWrapper>
     </>

@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';    
 
 import Social from '../components/social';
 
@@ -14,13 +14,13 @@ import { Aside, MainNav } from '../styles/mainnav';
 const Nav = (props) => {
   const [navOpen, setNavOpen] = useState(true);
 
-  const useEffect = () =>{
-    let currentPath = window.location.pathname;
-    if(currentPath !== '/'){
-      setNavOpen(false);
-      slideNav();
-    }
-  }
+  // const useEffect = () =>{
+  //   let currentPath = window.location.pathname;
+  //   if(currentPath !== '/'){
+  //     setNavOpen(false);
+  //     slideNav();
+  //   }
+  // }
 
   const toggleNav = e => {
     e.preventDefault();

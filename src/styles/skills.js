@@ -153,3 +153,7 @@ export const SkillContainer = styled.div`
     }
 
 `;
+
+export const GithubTracker = styled.div`
+
+`;

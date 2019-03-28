@@ -20,12 +20,12 @@ const Skills = ({data}) => {
   const [githubResults, setGithubResults] = useState('');
   
   useEffect(() => {
-    fetch('https://github.com/cmcintyre416/cm-portfolio-master/commits/master.atom')
+    fetch('https://api.github.com/users/cmcintyre416/repos?callback=CALLBACK')
       .then(
         (result) => {
           console.log(result);
           setGitLoaded(true);
-          setGithubResults(githubResults = result);
+          setGithubResults(result);
         },
         (error) => {
           setGitLoaded(true);

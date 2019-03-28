@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from 'gatsby';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
@@ -16,23 +17,20 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList] = useState(data.allSkillsJson.edges);
-  const [gitContentLoaded, setGitLoaded] = useState(false);
-  const [githubResults, setGithubResults] = useState('');
-  
+  const [githubData, setGithubData] = useState({ hits: [] });
+  const [githubQuery] = useState('react');
+
   useEffect(() => {
-    fetch('https://api.github.com/users/cmcintyre416/repos?callback=CALLBACK')
-      .then(
-        (result) => {
-          console.log(result);
-          setGitLoaded(true);
-          setGithubResults(result);
-        },
-        (error) => {
-          setGitLoaded(true);
-          console.log(error);
-        }
-      )
-  });
+    let ignore = false;
+
+    async function fetchData() {
+      const result = await axios('https://api.github.com/users/cmcintyre416/repos?callback=CALLBACK');
+      if (!ignore) setGithubData(result.data);
+    }
+
+    fetchData();
+    return () => { ignore = true; }
+  }, [githubQuery]);
 
   const handleFilterChange = event => {
     setFilter(event.target.value);
@@ -44,12 +42,11 @@ const Skills = ({data}) => {
   
   const filteredList = initialList.filter(item => {
     return item.node.title.toLowerCase().includes(filterText.toLowerCase()) && item.node.mainTag.toLowerCase().includes(tagSelect.toLowerCase());
-    
   });
 
-const Skills = filteredList.map( (edge, i) => {
-  return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
-});
+  const Skills = filteredList.map( (edge, i) => {
+    return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
+  });
 
   return (
     <>

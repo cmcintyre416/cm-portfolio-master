@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,11 +10,31 @@ library.add(faReact, faJs, faCss3, faSass, faLess, faNpm, faGulp, faGithub, faJi
 
 const SkillsPosts = ({skill}) => {
   const [open, setOpen] = useState(false);
+  
+  const determineIcon = () => {
+    if(skill.icon === ''){
+      return (
+        <div>
+          Icon not found.
+        </div>
+      )
+    }else if(skill.icon.length > 1){
+      return (
+        <FontAwesomeIcon icon={["fab", skill.icon]} />
+      )
+    }else {
+      return (
+        <div>
+          Icon not found.
+        </div>
+      )
+    }
+  } 
 
   return (
     <SkillContainer onMouseLeave={()=> setOpen(false)}>
       <div className="skillLogoWrapper" onClick={() => setOpen(!open)}>
-        {skill.icon !== '' ? <FontAwesomeIcon icon={["fab", skill.icon]} /> : 'Icon Not Found'}
+        {determineIcon()}
         <p>{skill.title}</p>
       </div>
       <div className={`skillViewWrapper  ${open ? 'openView' : 'closeView'}`}>

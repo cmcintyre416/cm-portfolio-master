@@ -17,14 +17,14 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList] = useState(data.allSkillsJson.edges);
-  const [githubData, setGithubData] = useState({ hits: [] });
-  const [githubQuery] = useState('react');
+  const [githubData, setGithubData] = useState({ data: [] });
+  const [githubQuery] = useState('');
 
   useEffect(() => {
     let ignore = false;
 
     async function fetchData() {
-      const result = await axios('https://api.github.com/users/cmcintyre416/repos?callback=CALLBACK');
+      const result = await axios('https://api.github.com/users/cmcintyre416/repos?json');
       if (!ignore) setGithubData(result.data);
     }
 
@@ -32,6 +32,7 @@ const Skills = ({data}) => {
     return () => { ignore = true; }
   }, [githubQuery]);
 
+  console.log(githubData);
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };

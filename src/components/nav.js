@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import { useState } from 'react';    
+import { useState, useEffect } from 'react';    
 
 import Social from '../components/social';
 
@@ -12,33 +12,36 @@ import { Aside, MainNav } from '../styles/mainnav';
 
 
 const Nav = (props) => {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(props.navIsOpen);
+  
+  useEffect(()=>{
+    const navContainer = document.querySelector('.navContainer');
 
-  // const useEffect = () =>{
-  //   let currentPath = window.location.pathname;
-  //   if(currentPath !== '/'){
-  //     setNavOpen(false);
-  //     slideNav();
-  //   }
-  // }
+    if(!navOpen){
+      navContainer.classList.add('closed');
+    }else{
+      navContainer.classList.remove('closed');
+    }
+    
+  });
 
   const toggleNav = e => {
-    e.preventDefault();
+    // e.preventDefault();
+    setNavOpen(!navOpen);
     slideNav();
   }
   
   const slideNav = () => {
-    setNavOpen(!navOpen);
-
     const navContainer = document.querySelector('.navContainer');
-
     if(navOpen){
       navContainer.classList.add('closed');
     }else{
       navContainer.classList.remove('closed');
     }
-
   }
+
+  
+
 
   return (
     <Aside className={`${props.navType} mainAside navContainer`}>

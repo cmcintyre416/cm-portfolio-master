@@ -51,7 +51,7 @@ const Skills = ({data}) => {
   return (
     <>
       <Header headerName="simpleHeader" linkTo="/"/>
-      <Nav navType="fixedNav"/>
+      <Nav navType="fixedNav" navIsOpen={false}/>
       <MainWrapper>
         <ContentWrapper>
           <BackHome/>

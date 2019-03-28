@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJs, faCss3, faSass, faLess, faNpm, faNodeJs, faGulp, faGithub, faJquery } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faJs, faCss3, faSass, faLess, faNpm, faGulp, faGithub, faJira, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { SkillContainer } from "../styles/skills.js";
 
-library.add(faReact, faJs, faCss3, faSass, faLess, faNpm, faNodeJs, faGulp, faGithub, faJquery);
+library.add(faReact, faJs, faCss3, faSass, faLess, faNpm, faGulp, faGithub, faJira, faNodeJs);
 
 const SkillsPosts = ({skill}) => {
   const [open, setOpen] = useState(false);

@@ -9,6 +9,7 @@ import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
 import SkillsPosts from '../components/skillsPosts';
 import { skillTags } from "../../static/data/skillTags";
+import { CLGit, IDGit } from "../../static/admin/gitCred";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
@@ -24,7 +25,7 @@ const Skills = ({data}) => {
     let ignore = false;
 
     async function fetchData() {
-      const result = await axios('https://api.github.com/users/cmcintyre416/repos?json');
+      const result = await axios(`https://api.github.com/users/cmcintyre416/events?json`);
       if (!ignore) setGithubData(result.data);
     }
 
@@ -33,6 +34,7 @@ const Skills = ({data}) => {
   }, [githubQuery]);
 
   console.log(githubData);
+
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };

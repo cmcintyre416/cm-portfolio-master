@@ -105,7 +105,7 @@ export default function Template({data}){
         <MainWrapper className="blogTemplateWrapper">
           <ContentWrapper>
             <BackToBlog>
-              <Link to={'/blog'}>
+              <Link to={'/blog/'}>
                   All posts
               </Link>
               <Social/>

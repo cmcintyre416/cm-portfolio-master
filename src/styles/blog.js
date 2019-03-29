@@ -14,8 +14,8 @@ export const BlogPosts = styled.div`
     grid-template-columns: 48% 48%;
   }
 
-   @media(max-width: 800px){
-        padding: 0 50px;
-        grid-template-columns: 1fr;
-    }
+  @media(max-width: 800px){
+      padding: 0 50px;
+      grid-template-columns: 1fr;
+  }
 `;

@@ -1,12 +1,10 @@
 import React from "react";
 import SEO from "../components/seo";
-import Nav from '../components/nav';
 import Header from '../components/header';
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import BackHome from '../components/backHome';
 
 import styled from 'styled-components';
-import {darkHoverBlue, darkBlue} from '../styles/colours';
 
 const NotFound = styled.div`
   margin-top: 100px;

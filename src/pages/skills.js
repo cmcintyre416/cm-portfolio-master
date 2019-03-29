@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from 'gatsby';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
@@ -16,23 +16,27 @@ import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
-  const [initialList] = useState(data.allSkillsJson.edges);
-  const [githubData, setGithubData] = useState({ data: [] });
-  const [githubQuery] = useState('react');
+  const [initialList, setInitialList] = useState([]);
+  // const [githubData, setGithubData] = useState({ data: [] });
+  // const [githubQuery] = useState('react');
+  // API GITHUB CALL
+  // let ignore = false;
+  // async function fetchData() {
+  //   const result = await axios(`https://api.github.com/users/cmcintyre416/events?json`);
+  //   if (!ignore) setGithubData(result.data);
+  // }
+  // fetchData();
+  // return () => { ignore = true; }
 
   useEffect(() => {
-    let ignore = false;
-
-    async function fetchData() {
-      const result = await axios(`https://api.github.com/users/cmcintyre416/events?json`);
-      if (!ignore) setGithubData(result.data);
-    }
-
-    // fetchData();
-    return () => { ignore = true; }
-  }, [githubQuery]);
-
-  // console.log(githubData);
+    // Initial List By Alphabet
+    const listAlpha = data.allSkillsJson.edges.sort( (a, b) => {
+      if(a.node.title < b.node.title) { return -1; }
+      if(a.node.title > b.node.title) { return 1; }
+      return 0;
+    });
+    setInitialList(listAlpha);
+  });
 
   const handleFilterChange = event => {
     setFilter(event.target.value);

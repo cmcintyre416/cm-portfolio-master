@@ -35,7 +35,7 @@ const BackHomeContainer = styled.div`
         }
     }
 
-    @media(max-width: 800px){
+    @media(max-width: 900px){
         padding: 0 50px;
     }
 

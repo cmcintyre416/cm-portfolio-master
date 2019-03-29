@@ -3,15 +3,11 @@ import { darkBlue } from '../styles/colours';
 
 export const SkillsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
 
-  @media(max-width: 1200px){
-      grid-template-columns:  1fr 1fr 1fr 1fr;
-  }
-
-  @media(max-width: 800px){
+  @media(max-width: 900px){
       grid-template-columns:  1fr 1fr 1fr;
       padding: 0 50px;
   }

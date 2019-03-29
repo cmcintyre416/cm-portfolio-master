@@ -37,7 +37,7 @@ const SkillsPosts = ({skill}) => {
         <div className="skillViewInnerWrapper">
           <div className="viewTitleLogoContainer">
             <p className="viewTitle">{skill.title}</p>
-            <p className={`viewMainTag ${skill.mainTag}`}>{skill.mainTag}</p>
+            <p className={`viewMainTag tag-${skill.mainTag}`}>{skill.mainTag}</p>
           </div>
           <p className="viewSubTitle">{skill.subTitle}</p>
           <p className="viewDescription">{skill.description}</p>

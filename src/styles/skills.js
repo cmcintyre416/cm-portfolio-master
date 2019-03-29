@@ -156,6 +156,31 @@ export const SkillContainer = styled.div`
           .viewDescription {
             font-size: 0.6rem;
           }
+
+          /* Tags */
+          .viewMainTag {
+            padding: 0 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            box-shadow: 0px 2px 5px lightgrey;
+          }
+
+          .tag-js {
+            background-color: gold;
+          }
+
+          .tag-tools {
+            background-color: aqua;
+          }
+
+          .tag-css {
+            background-color: coral;
+          }
+
+          .tag-systems {
+            background-color: springgreen;
+          }
         }
 
         .arrowUp {

@@ -9,7 +9,6 @@ import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
 import SkillsPosts from '../components/skillsPosts';
 import { skillTags } from "../../static/data/skillTags";
-import { CLGit, IDGit } from "../../static/admin/gitCred";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
@@ -19,7 +18,7 @@ const Skills = ({data}) => {
   const [tagSelect, setTagSelect] = useState('');
   const [initialList] = useState(data.allSkillsJson.edges);
   const [githubData, setGithubData] = useState({ data: [] });
-  const [githubQuery] = useState('');
+  const [githubQuery] = useState('react');
 
   useEffect(() => {
     let ignore = false;
@@ -29,11 +28,11 @@ const Skills = ({data}) => {
       if (!ignore) setGithubData(result.data);
     }
 
-    fetchData();
+    // fetchData();
     return () => { ignore = true; }
   }, [githubQuery]);
 
-  console.log(githubData);
+  // console.log(githubData);
 
   const handleFilterChange = event => {
     setFilter(event.target.value);

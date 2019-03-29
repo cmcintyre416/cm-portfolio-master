@@ -18,15 +18,9 @@ const SkillsPosts = ({skill}) => {
           Icon not found.
         </div>
       )
-    }else if(skill.icon.length > 1){
+    }else{
       return (
         <FontAwesomeIcon icon={["fab", skill.icon]} />
-      )
-    }else {
-      return (
-        <div>
-          Icon not found.
-        </div>
       )
     }
   } 

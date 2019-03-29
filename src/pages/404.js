@@ -19,8 +19,8 @@ const NotFoundPage = () => (
     <Header linkTo="/blog"/>
     <MainWrapper>
       <ContentWrapper>
-        <BackHome/>
         <NotFound>
+        <BackHome/>
             <h2>PAGE NOT FOUND</h2>
             <p>You just hit a route that doesn't exist.</p>
         </NotFound>

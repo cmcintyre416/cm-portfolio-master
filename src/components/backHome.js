@@ -23,6 +23,7 @@ const BackHomeContainer = styled.div`
         text-decoration: none;
         color: black;
         padding: 2.5px 0;
+        height: 30px;
 
         &:hover {
             color: ${darkBlue};

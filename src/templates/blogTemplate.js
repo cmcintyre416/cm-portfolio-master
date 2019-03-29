@@ -22,6 +22,10 @@ const BlogTemplate = styled.div`
   .blog-post {
     h2 {  
       font-size: 2.8rem;
+
+      @media(max-width: 800px){
+          font-size: 2.2rem;
+      }
     }
 
     img {
@@ -36,8 +40,20 @@ const BlogTemplate = styled.div`
         font-size: 0.8rem;
         margin: 10px 0;
       }
+      
+      @media(max-width: 700px){
+          width: 95%;
+          margin: 35px auto;
+      }
+    }
+    
+    .blog-paragraphs {
+      @media(max-width: 700px){
+          margin: 10px auto;
+      }
     }
   }
+
 `;
 
 const BackToBlog = styled.div`

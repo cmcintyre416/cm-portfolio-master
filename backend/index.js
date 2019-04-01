@@ -30,10 +30,7 @@ app.get('/api/githubActivity/:id', (req, res) => {
 app.post('/api/githubActivity', (req, res) => {
    
     const { error } = validateGitAction(req.body);
-    if(error){
-        res.status(400).send(result.error.details[0].message);
-        return;
-    }
+    if (error) return res.status(400).send(result.error.details[0].message);
 
     const githubAction = {
         id: githubActivity.length + 1,
@@ -47,13 +44,10 @@ app.post('/api/githubActivity', (req, res) => {
 
 app.put('/api/githubActivity/:id', (req, res) => {
     const githubAction = githubActivity.find(c => c.id === parseInt(req.params.id));
-    if  (!githubAction) res.status(404).send('The github data with the given ID was not found.');
+    if (!githubAction) res.status(404).send('The github data with the given ID was not found.');
 
     const { error } = validateGitAction(req.body);
-    if(error){
-        res.status(400).send(result.error.details[0].message);
-        return;
-    }
+    if(error) return res.status(400).send(result.error.details[0].message);
 
     githubAction.name = req.body.name;
     res.send(githubAction);
@@ -63,7 +57,7 @@ app.put('/api/githubActivity/:id', (req, res) => {
 
 app.delete('/api/githubActivity/:id', (req, res) => {
     const githubAction = githubActivity.find(c => c.id === parseInt(req.params.id));
-    if  (!githubAction) res.status(404).send('The github data with the given ID was not found.');
+    if (!githubAction) return res.status(404).send('The github data with the given ID was not found.');
 
     const index = githubActivity.indexOf(githubAction);
     githubActivity.splice(index, 1);

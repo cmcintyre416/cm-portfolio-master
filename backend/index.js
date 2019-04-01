@@ -21,7 +21,7 @@ app.get('/api/githubActivity', (req, res) => {
 
 app.get('/api/githubActivity/:id', (req, res) => {
     const githubAction = githubActivity.find(c => c.id === parseInt(req.params.id));
-    if  (!githubAction) res.status(404).send('The github data with the given ID was not found.');
+    if (!githubAction) return res.status(404).send('The github data with the given ID was not found.');
     res.send(githubAction);
 });
 

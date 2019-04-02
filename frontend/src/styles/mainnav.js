@@ -13,6 +13,7 @@ export const Aside = styled.div`
     flex-direction: column;
     justify-content: space-between;
     overflow:hidden;
+    padding: 0 40px 0 30px;
   }
 
   .minNavButton {
@@ -119,9 +120,5 @@ export const MainNav = styled.nav`
       color: ${darkHoverBlue};
     }
   }
-`;
-
-export const FixedNavWrapper = styled.div`
-    
 `;
 

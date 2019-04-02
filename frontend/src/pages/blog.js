@@ -23,11 +23,11 @@ const Blog = ({
     <>
       <BlogPage>
         <Header headerName="simpleHeader" linkTo="/"/>
-        <Nav navType="fixedNav"/>
+        <Nav navType="fixedNav" navIsOpen={false}/>
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>
-              <PageTitles pageTitle='Blog' pageSub='Welcome to my blog' pageDescription="Here are some of my dev thoughts and some cool things I've picked up on the way."/>
+              <PageTitles pageTitle='Blog' pageSub='Welcome to my blog' />
             <BlogPosts>
               {Posts}
             </BlogPosts>

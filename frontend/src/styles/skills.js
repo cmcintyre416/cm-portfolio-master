@@ -3,9 +3,22 @@ import { darkBlue } from '../styles/colours';
 
 export const SkillsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
+
+  @media(max-width: 900px){
+      grid-template-columns:  1fr 1fr 1fr;
+      padding: 0 50px;
+  }
+
+  @media(max-width: 650px){
+      grid-template-columns:  1fr 1fr;
+  }
+
+  @media(max-width: 500px){
+      grid-template-columns:  1fr;
+  }
 `;
 
 export const SkillsFilters = styled.div`
@@ -33,6 +46,24 @@ export const SkillsFilters = styled.div`
     label {
       margin-right: 20px;
     }
+  }
+
+  @media(max-width: 800px){
+      padding: 0 50px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .selectorContainer, form{
+        width: 100%;
+      }
+
+      .selectorContainer {
+        margin: 10px 0;
+      }
+
+      form {
+        margin: 10px 0 50px;
+      }
   }
 `;
 
@@ -121,6 +152,31 @@ export const SkillContainer = styled.div`
           .viewDescription {
             font-size: 0.6rem;
           }
+
+          /* Tags */
+          .viewMainTag {
+            padding: 0 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            box-shadow: 0px 2px 5px lightgrey;
+          }
+
+          .tag-js {
+            background-color: gold;
+          }
+
+          .tag-tools {
+            background-color: aqua;
+          }
+
+          .tag-css {
+            background-color: coral;
+          }
+
+          .tag-systems {
+            background-color: springgreen;
+          }
         }
 
         .arrowUp {
@@ -151,5 +207,9 @@ export const SkillContainer = styled.div`
     .closeView {
       display: none;
     }
+
+`;
+
+export const GithubTracker = styled.div`
 
 `;

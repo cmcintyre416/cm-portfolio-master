@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from 'gatsby';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+// import axios from 'axios';
 
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
@@ -10,13 +11,33 @@ import SkillsPosts from '../components/skillsPosts';
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
-import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
+import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
-  const [initialList] = useState(data.allSkillsJson.edges);
-  
+  const [initialList, setInitialList] = useState([]);
+  // const [githubData, setGithubData] = useState({ data: [] });
+  // const [githubQuery] = useState('react');
+  // API GITHUB CALL
+  // let ignore = false;
+  // async function fetchData() {
+  //   const result = await axios(`https://api.github.com/users/cmcintyre416/events?json`);
+  //   if (!ignore) setGithubData(result.data);
+  // }
+  // fetchData();
+  // return () => { ignore = true; }
+
+  useEffect(() => {
+    // Initial List By Alphabet
+    const listAlpha = data.allSkillsJson.edges.sort( (a, b) => {
+      if(a.node.title < b.node.title) { return -1; }
+      if(a.node.title > b.node.title) { return 1; }
+      return 0;
+    });
+    setInitialList(listAlpha);
+  });
+
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };
@@ -27,17 +48,16 @@ const Skills = ({data}) => {
   
   const filteredList = initialList.filter(item => {
     return item.node.title.toLowerCase().includes(filterText.toLowerCase()) && item.node.mainTag.toLowerCase().includes(tagSelect.toLowerCase());
-    
   });
 
-const Skills = filteredList.map( (edge, i) => {
-  return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
-});
+  const Skills = filteredList.map( (edge, i) => {
+    return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
+  });
 
   return (
     <>
       <Header headerName="simpleHeader" linkTo="/"/>
-      <Nav navType="fixedNav"/>
+      <Nav navType="fixedNav" navIsOpen={false}/>
       <MainWrapper>
         <ContentWrapper>
           <BackHome/>
@@ -59,6 +79,9 @@ const Skills = filteredList.map( (edge, i) => {
           <SkillsContainer>
             {Skills} 
           </SkillsContainer>
+          <GithubTracker>
+            
+          </GithubTracker>
         </ContentWrapper>
       </MainWrapper>
     </>

@@ -13,4 +13,9 @@ export const BlogPosts = styled.div`
   @media(max-width: 1400px){
     grid-template-columns: 48% 48%;
   }
+
+  @media(max-width: 800px){
+      padding: 0 50px;
+      grid-template-columns: 1fr;
+  }
 `;

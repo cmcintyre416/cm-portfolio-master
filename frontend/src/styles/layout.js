@@ -10,20 +10,20 @@ export const LayoutWrapper = styled.div`
   height: 100%;
 
   .navContainer {
-    width: 250px;
-    transition: 1s ease;
+    width: 200px;
+    transition: 0.4s ease-in;
 
     .mainNav {
       opacity: 1;
       max-height: 200px;
       transform: translateX(0);
-      transition: 1s ease;
+      transition: 0.4s ease-in;
     }
 
     .mainSocial {
       opacity: 1;
       transform: translateX(0);
-      transition: 1s ease;
+      transition: 0.4s ease-in;
     }
 }
 

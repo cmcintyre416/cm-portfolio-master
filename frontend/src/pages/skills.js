@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from 'gatsby';
 import { useState, useEffect } from 'react';
-// import axios from 'axios';
 
 import Nav from '../components/nav';
 import BackHome from '../components/backHome';
@@ -17,16 +16,6 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  // const [githubData, setGithubData] = useState({ data: [] });
-  // const [githubQuery] = useState('react');
-  // API GITHUB CALL
-  // let ignore = false;
-  // async function fetchData() {
-  //   const result = await axios(`https://api.github.com/users/cmcintyre416/events?json`);
-  //   if (!ignore) setGithubData(result.data);
-  // }
-  // fetchData();
-  // return () => { ignore = true; }
 
   useEffect(() => {
     // Initial List By Alphabet

@@ -13,11 +13,11 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 //Github Activity
 
-let githubActivity = [];
+const githubActivity = [];
 
 //Get Github Data
 
-cron.schedule('* * 2 * *', () => {
+cron.schedule('* * 1 * *', () => {
     console.log("---------------------");
     console.log("Running Cron Job");
     getGithubData();
@@ -26,8 +26,8 @@ cron.schedule('* * 2 * *', () => {
 const getGithubData = () => {
     axios.get('https://api.github.com/users/cmcintyre416/events?json')
       .then(response => {
-          let githubData = response.data.splice(0, 6);
-          githubActivity = githubData;
+          let newGithubData = response.data.splice(0, 6);
+          githubActivity.push(newGithubData);
           console.log(githubActivity);
       })
       .catch(error => {
@@ -35,11 +35,11 @@ const getGithubData = () => {
       });
 };
 
-
 // GET
 
 app.get('/api/githubActivity', (req, res) => {
     res.send(githubActivity);
+    console.log(githubActivity);
 });
 
 app.get('/api/githubActivity/:id', (req, res) => {

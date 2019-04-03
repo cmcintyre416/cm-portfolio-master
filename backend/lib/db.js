@@ -3,7 +3,7 @@ import FileSync from 'lowdb/adapters/FileSync';
 
 const adapter = new FileSync('db.json');
 const db = low(adapter);
-db.defaults({ gitEvents: [], user: {}, count: 0})
+db.defaults({ gitEvents: []})
 .write();
 
 export default db;

@@ -7,7 +7,13 @@ const app = express();
 
 app.get('/githubData', async (req, res, next) => {
     console.log('scraping');
-    // const newGithubData = await getData('https://api.github.com/users/cmcintyre416/events/public?json', 6);
+    const newGithubData = await getData('https://api.github.com/users/cmcintyre416/events/public?json', 6);
+    db.get('gitEvents')
+        .push({
+            date: Date.now(),
+            githubActivity:  newGithubData
+    })
+    .write();
     res.json(newGithubData);
 });
 

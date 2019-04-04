@@ -20,6 +20,7 @@ function useScrapes() {
     const data = await res.json();
     setScrapes(data);
   }
+  
 
   useEffect(() => {
     fetchScrapes();

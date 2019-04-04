@@ -12,12 +12,29 @@ import { skillTags } from "../../static/data/skillTags";
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
 
+function useScrapes() {
+  const [scrapes, setScrapes] = useState({});
+
+  async function fetchScrapes() {
+    const res = await fetch(`http://localhost:2093/githubData`);
+    const data = await res.json();
+    setScrapes(data);
+  }
+
+  useEffect(() => {
+    fetchScrapes();
+  }, []);
+
+  return scrapes;
+};
+
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-
-  useEffect(() => {
+  const hookInfo = useScrapes();
+  
+  useEffect(() => { 
     // Initial List By Alphabet
     const listAlpha = data.allSkillsJson.edges.sort( (a, b) => {
       if(a.node.title < b.node.title) { return -1; }
@@ -69,7 +86,6 @@ const Skills = ({data}) => {
             {Skills} 
           </SkillsContainer>
           <GithubTracker>
-            
           </GithubTracker>
         </ContentWrapper>
       </MainWrapper>

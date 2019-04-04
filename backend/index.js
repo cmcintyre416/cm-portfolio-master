@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import db from './lib/db';
 import { getGithubEvents } from './lib/scraper';
 import './lib/cron';

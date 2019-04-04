@@ -68,3 +68,4 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 backend/db.json
+backend/db.json

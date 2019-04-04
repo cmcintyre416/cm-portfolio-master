@@ -1,3 +1,165 @@
 {
-  "gitEvents": {}
+  "gitEvents": [
+    {
+      "date": 1554397213819,
+      "githubActivity": [
+        {
+          "id": "9373977839",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3471139973,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "b224694bdc0fa4d96dde84b27660be8cc8dfeee7",
+            "before": "612c8b90914d3fc461398099801c86676a22efc7",
+            "commits": [
+              {
+                "sha": "b224694bdc0fa4d96dde84b27660be8cc8dfeee7",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Updated some of the functionality and attempted writing to db.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/b224694bdc0fa4d96dde84b27660be8cc8dfeee7"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-03T21:41:01Z"
+        },
+        {
+          "id": "9372243855",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3470221475,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "612c8b90914d3fc461398099801c86676a22efc7",
+            "before": "fd3bf09367cdaa294cef4625baa3424eb8cd861d",
+            "commits": [
+              {
+                "sha": "612c8b90914d3fc461398099801c86676a22efc7",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Start with nodemon and added db reconfig.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/612c8b90914d3fc461398099801c86676a22efc7"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-03T17:12:56Z"
+        },
+        {
+          "id": "9364997316",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3466381584,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "fd3bf09367cdaa294cef4625baa3424eb8cd861d",
+            "before": "d54f7da2053e80e5af9559ed30a834a1d2adfa84",
+            "commits": [
+              {
+                "sha": "fd3bf09367cdaa294cef4625baa3424eb8cd861d",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Updated scrape and express links with db low.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/fd3bf09367cdaa294cef4625baa3424eb8cd861d"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-02T19:53:44Z"
+        },
+        {
+          "id": "9358375825",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3462921596,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "d54f7da2053e80e5af9559ed30a834a1d2adfa84",
+            "before": "34cec167890f0e0172ed157d42b5ca336564972d",
+            "commits": [
+              {
+                "sha": "d54f7da2053e80e5af9559ed30a834a1d2adfa84",
+                "author": {
+                  "email": "colin@colinmcintyre.io",
+                  "name": "Colin Mcintyre"
+                },
+                "message": "Cron setup",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/d54f7da2053e80e5af9559ed30a834a1d2adfa84"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-02T02:08:43Z"
+        }
+      ]
+    }
+  ]
 }

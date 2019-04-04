@@ -5,15 +5,19 @@ import { getData } from './lib/scraper';
 
 const app = express();
 
+const resetDatabase = () => {
+  db.set('gitEvents', [])
+    .write()
+};
+
 app.get('/githubData', async (req, res, next) => {
     console.log('scraping');
     const newGithubData = await getData('https://api.github.com/users/cmcintyre416/events/public?json');
-    db.get('gitEvents')
-        .push({
-            date: Date.now(),
-            githubActivity:  newGithubData
-    })
-    .write();
+    resetDatabase();
+    db.get('gitEvents').push({
+        date: Date.now(),
+        githubActivity: newGithubData
+    }).write();
     res.json(newGithubData);
 });
 

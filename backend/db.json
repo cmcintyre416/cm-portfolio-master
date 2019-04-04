@@ -1,8 +1,47 @@
 {
   "gitEvents": [
     {
-      "date": 1554406081013,
+      "date": 1554406200505,
       "githubActivity": [
+        {
+          "id": "9381379685",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475076302,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "4fd5b2b6e8e38ff9e429ce562717968acde3150c",
+            "before": "846998a71cc4f47d3516eb09dc064b2d24ab3ed1",
+            "commits": [
+              {
+                "sha": "4fd5b2b6e8e38ff9e429ce562717968acde3150c",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Updated cron to run at minute 30 of every hour.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/4fd5b2b6e8e38ff9e429ce562717968acde3150c"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T19:28:44Z"
+        },
         {
           "id": "9380748338",
           "type": "PushEvent",
@@ -119,45 +158,6 @@
           },
           "public": true,
           "created_at": "2019-04-03T21:41:01Z"
-        },
-        {
-          "id": "9372243855",
-          "type": "PushEvent",
-          "actor": {
-            "id": 35696965,
-            "login": "cmcintyre416",
-            "display_login": "cmcintyre416",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/cmcintyre416",
-            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
-          },
-          "repo": {
-            "id": 170381744,
-            "name": "cmcintyre416/cm-portfolio-master",
-            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
-          },
-          "payload": {
-            "push_id": 3470221475,
-            "size": 1,
-            "distinct_size": 1,
-            "ref": "refs/heads/develop",
-            "head": "612c8b90914d3fc461398099801c86676a22efc7",
-            "before": "fd3bf09367cdaa294cef4625baa3424eb8cd861d",
-            "commits": [
-              {
-                "sha": "612c8b90914d3fc461398099801c86676a22efc7",
-                "author": {
-                  "email": "35696965+cmcintyre416@users.noreply.github.com",
-                  "name": "Colin McIntyre"
-                },
-                "message": "Start with nodemon and added db reconfig.",
-                "distinct": true,
-                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/612c8b90914d3fc461398099801c86676a22efc7"
-              }
-            ]
-          },
-          "public": true,
-          "created_at": "2019-04-03T17:12:56Z"
         }
       ]
     }

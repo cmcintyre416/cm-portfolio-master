@@ -7,9 +7,14 @@ import { getData } from './lib/scraper';
 
 const app = express();
 
-app.get('/githubData', async (req, res, next) => {
+app.get('/scrapeGithubData', async (req, res, next) => {
     const githubData = await getGithubEvents();
     res.json(githubData);
+});
+
+app.get('/githubData', async (req, res, next) => {
+    const githubData = db.value();
+    res.json({recentGithubEvents: githubData});
 });
 
 app.listen(2093, () => console.log(`app running`));

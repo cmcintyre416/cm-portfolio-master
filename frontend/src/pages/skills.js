@@ -12,7 +12,7 @@ import { skillTags } from "../../static/data/skillTags";
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
 
-function useScrapes() {
+function gitScrapes() {
   const [scrapes, setScrapes] = useState({});
 
   async function fetchScrapes() {
@@ -20,7 +20,6 @@ function useScrapes() {
     const data = await res.json();
     setScrapes(data);
   }
-
 
   useEffect(() => {
     fetchScrapes();
@@ -33,7 +32,7 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  const hookInfo = useScrapes();
+  const githubData = gitScrapes();
   
   useEffect(() => { 
     // Initial List By Alphabet
@@ -43,6 +42,8 @@ const Skills = ({data}) => {
       return 0;
     });
     setInitialList(listAlpha);
+
+    console.log(githubData);
   });
 
   const handleFilterChange = event => {

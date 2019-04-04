@@ -7,6 +7,7 @@ import './lib/cron';
 import { getData } from './lib/scraper';
 
 const app = express();
+app.use(cors());
 
 app.get('/scrapeGithubData', async (req, res, next) => {
     const githubData = await getGithubEvents();

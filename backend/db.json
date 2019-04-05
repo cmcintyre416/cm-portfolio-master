@@ -1,8 +1,86 @@
 {
   "gitEvents": [
     {
-      "date": 1554413400486,
+      "date": 1554474600336,
       "githubActivity": [
+        {
+          "id": "9382187469",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475508902,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "f219488c0fc32f65a56a4c21232852a54008392b",
+            "before": "13833135de6d81ecc03ae738735b74ecfada8914",
+            "commits": [
+              {
+                "sha": "f219488c0fc32f65a56a4c21232852a54008392b",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Cors initialized for requests to localhost 2093 and pulling github info properly from hook to skills page.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/f219488c0fc32f65a56a4c21232852a54008392b"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T21:36:58Z"
+        },
+        {
+          "id": "9382162808",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475495600,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "13833135de6d81ecc03ae738735b74ecfada8914",
+            "before": "c98018f6b69da5b3665f49ee9966c99e1209dcd5",
+            "commits": [
+              {
+                "sha": "13833135de6d81ecc03ae738735b74ecfada8914",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Ignore db.json",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/13833135de6d81ecc03ae738735b74ecfada8914"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T21:32:37Z"
+        },
         {
           "id": "9382144588",
           "type": "PushEvent",
@@ -80,84 +158,6 @@
           },
           "public": true,
           "created_at": "2019-04-04T21:28:03Z"
-        },
-        {
-          "id": "9382133273",
-          "type": "PushEvent",
-          "actor": {
-            "id": 35696965,
-            "login": "cmcintyre416",
-            "display_login": "cmcintyre416",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/cmcintyre416",
-            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
-          },
-          "repo": {
-            "id": 170381744,
-            "name": "cmcintyre416/cm-portfolio-master",
-            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
-          },
-          "payload": {
-            "push_id": 3475479423,
-            "size": 1,
-            "distinct_size": 1,
-            "ref": "refs/heads/develop",
-            "head": "8f0e045e2d43e8bc3e52abc6b73e4652b779cd5d",
-            "before": "36fb8cc8fee4a8ea8dcb17e9d0c0e0aa1099b9ac",
-            "commits": [
-              {
-                "sha": "8f0e045e2d43e8bc3e52abc6b73e4652b779cd5d",
-                "author": {
-                  "email": "35696965+cmcintyre416@users.noreply.github.com",
-                  "name": "Colin McIntyre"
-                },
-                "message": "Updated with cors and function with hook for getting data.",
-                "distinct": true,
-                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/8f0e045e2d43e8bc3e52abc6b73e4652b779cd5d"
-              }
-            ]
-          },
-          "public": true,
-          "created_at": "2019-04-04T21:27:38Z"
-        },
-        {
-          "id": "9381700701",
-          "type": "PushEvent",
-          "actor": {
-            "id": 35696965,
-            "login": "cmcintyre416",
-            "display_login": "cmcintyre416",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/cmcintyre416",
-            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
-          },
-          "repo": {
-            "id": 170381744,
-            "name": "cmcintyre416/cm-portfolio-master",
-            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
-          },
-          "payload": {
-            "push_id": 3475249533,
-            "size": 1,
-            "distinct_size": 1,
-            "ref": "refs/heads/develop",
-            "head": "36fb8cc8fee4a8ea8dcb17e9d0c0e0aa1099b9ac",
-            "before": "77fbb1ab2b1addacb269b9951dd1bc4b34e35efc",
-            "commits": [
-              {
-                "sha": "36fb8cc8fee4a8ea8dcb17e9d0c0e0aa1099b9ac",
-                "author": {
-                  "email": "35696965+cmcintyre416@users.noreply.github.com",
-                  "name": "Colin McIntyre"
-                },
-                "message": "Created new endpoints for db to access db instead of runnning scrape.",
-                "distinct": true,
-                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/36fb8cc8fee4a8ea8dcb17e9d0c0e0aa1099b9ac"
-              }
-            ]
-          },
-          "public": true,
-          "created_at": "2019-04-04T20:19:05Z"
         }
       ]
     }

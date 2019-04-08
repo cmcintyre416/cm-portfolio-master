@@ -32,7 +32,7 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  const githubData = gitScrapes();
+  // const githubData = gitScrapes();
   
   useEffect(() => { 
     // Initial List By Alphabet
@@ -43,7 +43,6 @@ const Skills = ({data}) => {
     });
     setInitialList(listAlpha);
 
-    console.log(githubData);
   });
 
   const handleFilterChange = event => {

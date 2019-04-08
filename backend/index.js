@@ -19,4 +19,6 @@ app.get('/githubData', async (req, res, next) => {
     res.json({recentGithubEvents: githubData});
 });
 
-app.listen(80, () => console.log(`app running`));
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
+});

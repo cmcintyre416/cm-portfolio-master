@@ -16,7 +16,7 @@ function gitScrapes() {
   const [scrapes, setScrapes] = useState({});
 
   async function fetchScrapes() {
-    const res = await fetch(`https://www.colinmcintyre.io/githubData`);
+    const res = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
     const data = await res.json();
     setScrapes(data);
   }
@@ -24,7 +24,6 @@ function gitScrapes() {
   useEffect(() => {
     fetchScrapes();
   }, []);
-
   return scrapes;
 };
 
@@ -32,7 +31,7 @@ const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  // const githubData = gitScrapes();
+  const githubData = gitScrapes();
   
   useEffect(() => { 
     // Initial List By Alphabet
@@ -42,7 +41,6 @@ const Skills = ({data}) => {
       return 0;
     });
     setInitialList(listAlpha);
-
   });
 
   const handleFilterChange = event => {
@@ -60,6 +58,13 @@ const Skills = ({data}) => {
   const Skills = filteredList.map( (edge, i) => {
     return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
   });
+
+  const DisplayGithubData = () => {
+    const activity = githubData.recentGithubEvents;
+
+   
+    return <div></div>;
+  };
 
   return (
     <>
@@ -87,6 +92,7 @@ const Skills = ({data}) => {
             {Skills} 
           </SkillsContainer>
           <GithubTracker>
+            <DisplayGithubData/>
           </GithubTracker>
         </ContentWrapper>
       </MainWrapper>

@@ -16,7 +16,7 @@ function gitScrapes() {
   const [scrapes, setScrapes] = useState({});
 
   async function fetchScrapes() {
-    const res = await fetch(`http://localhost:2093/githubData`);
+    const res = await fetch(`https://www.colinmcintyre.io/githubData`);
     const data = await res.json();
     setScrapes(data);
   }

@@ -19,4 +19,4 @@ app.get('/githubData', async (req, res, next) => {
     res.json({recentGithubEvents: githubData});
 });
 
-app.listen(2093, () => console.log(`app running`));
+app.listen(80, () => console.log(`app running`));

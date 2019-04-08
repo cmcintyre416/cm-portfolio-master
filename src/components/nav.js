@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
+import { useState, useEffect } from 'react';    
 
 import Social from '../components/social';
 
@@ -10,74 +11,70 @@ import { darkBlue, mediumBlue } from '../styles/colours';
 import { Aside, MainNav } from '../styles/mainnav';
 
 
-export default class Nav extends React.Component {
-  state = {
-    navOpen: true,
-  };
-
-  componentDidMount(){
-    let currentPath = window.location.pathname;
-    if(currentPath !== '/'){
-      this.setState({
-      navOpen: false
-      });
-      this.slideNav();
-    }
-  }
-
-  toggleNav = e => {
-    e.preventDefault();
-    this.slideNav();
-  }
+const Nav = (props) => {
+  const [navOpen, setNavOpen] = useState(props.navIsOpen);
   
-  slideNav = () => {
-
-    this.setState({
-      navOpen: !this.state.navOpen
-    });
-
+  useEffect(()=>{
     const navContainer = document.querySelector('.navContainer');
 
-    if(this.state.navOpen){
+    if(!navOpen){
       navContainer.classList.add('closed');
     }else{
       navContainer.classList.remove('closed');
     }
+    
+  });
 
+  const toggleNav = e => {
+    // e.preventDefault();
+    setNavOpen(!navOpen);
+    slideNav();
+  }
+  
+  const slideNav = () => {
+    const navContainer = document.querySelector('.navContainer');
+    if(navOpen){
+      navContainer.classList.add('closed');
+    }else{
+      navContainer.classList.remove('closed');
+    }
   }
 
-  render(){
-    return (
-      <Aside className="mainAside">
-        <button onClick={this.toggleNav} className="minNavButton">
-          <div className="line line1"></div>
-          <div className="line line2"></div>
-          <div className="line line3"></div>
-          <div className="line line4"></div>
-        </button>
-        <MainWrapper className="mainNavWrapper">
-          <MainNav className="mainNav">
-            {navItems.map(item => {
-              return <Link 
-                to={item.link}
-                key={item.id}  
-                activeStyle={
-                  {
-                    transition: `0.5s ease`,
-                    borderBottom: `1px solid ${mediumBlue}`,
-                    transform: `scale(1.1)`,
-                    marginLeft: `10px`,
-                    color: `${darkBlue}`
-                  }
+  
+
+
+  return (
+    <Aside className={`${props.navType} mainAside navContainer`}>
+      <button onClick={toggleNav} className="minNavButton">
+        <div className="line line1"></div>
+        <div className="line line2"></div>
+        <div className="line line3"></div>
+        <div className="line line4"></div>
+      </button>
+      <MainWrapper className="mainNavWrapper">
+        <MainNav className="mainNav">
+          {navItems.map((item, i) => {
+            return <Link 
+              to={item.link}
+              key={`key-${i}`}  
+              activeStyle={
+                {
+                  transition: `0.5s ease`,
+                  borderBottom: `1px solid ${mediumBlue}`,
+                  transform: `scale(1.1)`,
+                  marginLeft: `10px`,
+                  color: `${darkBlue}`
                 }
-                >
-                {item.text}
-              </Link>
-            })}
-          </MainNav>
-          <Social/>
-        </MainWrapper>
-      </Aside>
-    )
-  }
+              }
+              >
+              {item.text}
+            </Link>
+          })}
+        </MainNav>
+        <Social/>
+      </MainWrapper>
+    </Aside>
+  )
 }
+
+export default Nav;

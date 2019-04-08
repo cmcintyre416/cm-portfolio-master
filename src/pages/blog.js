@@ -22,14 +22,12 @@ const Blog = ({
   return (
     <>
       <BlogPage>
-        <Header headerName="blogHomeHeader" linkTo="/"/>
-        <div className="navContainer blogNav">
-          <Nav/>
-        </div>
+        <Header headerName="simpleHeader" linkTo="/"/>
+        <Nav navType="fixedNav" navIsOpen={false}/>
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>
-              <PageTitles pageTitle='Blog' pageSub='Welcome to my blog' pageDescription="Here are some of my dev thoughts and some cool things I've picked up on the way."/>
+              <PageTitles pageTitle='Blog' pageSub='Welcome to my blog' />
             <BlogPosts>
               {Posts}
             </BlogPosts>

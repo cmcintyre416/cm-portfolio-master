@@ -46,10 +46,8 @@ const Project = () => {
   return (
     <>
       <ProjectPage>
-        <Header/>
-        <div className="navContainer blogNav">
-          <Nav/>
-        </div>
+        <Header headerName="simpleHeader"/>
+          <Nav navType="fixedNav"/>
         <MainWrapper>
           <ContentWrapper>
             <BackHome/>

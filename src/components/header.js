@@ -88,6 +88,18 @@ const MainHeader = styled.div`
       animation: animatePeriod 2.5s cubic-bezier(0,0.23,1,.1) forwards;
     }
   }
+
+  &.simpleHeader {
+      min-height: auto;
+      text-align: center;
+      box-shadow: none;
+      background-color: transparent;
+      padding-top: 20px;
+
+      .animationLogo {
+        width: 50px;
+      }
+    }
 `;
 
 const Header = (props) => (

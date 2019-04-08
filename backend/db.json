@@ -1,0 +1,165 @@
+{
+  "gitEvents": [
+    {
+      "date": 1554489000332,
+      "githubActivity": [
+        {
+          "id": "9386904141",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3478054769,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "13c94a3c3f1c91080d2ba3c109e9b9f0bcb2836f",
+            "before": "f219488c0fc32f65a56a4c21232852a54008392b",
+            "commits": [
+              {
+                "sha": "13c94a3c3f1c91080d2ba3c109e9b9f0bcb2836f",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Push some db to test and save latest.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/13c94a3c3f1c91080d2ba3c109e9b9f0bcb2836f"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-05T14:39:14Z"
+        },
+        {
+          "id": "9382187469",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475508902,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "f219488c0fc32f65a56a4c21232852a54008392b",
+            "before": "13833135de6d81ecc03ae738735b74ecfada8914",
+            "commits": [
+              {
+                "sha": "f219488c0fc32f65a56a4c21232852a54008392b",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Cors initialized for requests to localhost 2093 and pulling github info properly from hook to skills page.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/f219488c0fc32f65a56a4c21232852a54008392b"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T21:36:58Z"
+        },
+        {
+          "id": "9382162808",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475495600,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "13833135de6d81ecc03ae738735b74ecfada8914",
+            "before": "c98018f6b69da5b3665f49ee9966c99e1209dcd5",
+            "commits": [
+              {
+                "sha": "13833135de6d81ecc03ae738735b74ecfada8914",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Ignore db.json",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/13833135de6d81ecc03ae738735b74ecfada8914"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T21:32:37Z"
+        },
+        {
+          "id": "9382144588",
+          "type": "PushEvent",
+          "actor": {
+            "id": 35696965,
+            "login": "cmcintyre416",
+            "display_login": "cmcintyre416",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cmcintyre416",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35696965?"
+          },
+          "repo": {
+            "id": 170381744,
+            "name": "cmcintyre416/cm-portfolio-master",
+            "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master"
+          },
+          "payload": {
+            "push_id": 3475485647,
+            "size": 1,
+            "distinct_size": 1,
+            "ref": "refs/heads/develop",
+            "head": "c98018f6b69da5b3665f49ee9966c99e1209dcd5",
+            "before": "d7d9d1692c279ee5c53c4935b529c19486e7b4ab",
+            "commits": [
+              {
+                "sha": "c98018f6b69da5b3665f49ee9966c99e1209dcd5",
+                "author": {
+                  "email": "35696965+cmcintyre416@users.noreply.github.com",
+                  "name": "Colin McIntyre"
+                },
+                "message": "Update gitignore properly with db json.",
+                "distinct": true,
+                "url": "https://api.github.com/repos/cmcintyre416/cm-portfolio-master/commits/c98018f6b69da5b3665f49ee9966c99e1209dcd5"
+              }
+            ]
+          },
+          "public": true,
+          "created_at": "2019-04-04T21:29:31Z"
+        }
+      ]
+    }
+  ]
+}

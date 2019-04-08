@@ -19,59 +19,67 @@ export const PageTitleHeader = styled.div`
     z-index: 4;
   }
 
-.topBackground {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  
-  path {
-    stroke: ${darkHoverBlue};
-    fill:${darkBlue};
-    fill-opacity:0;
-    stroke-width:0.4;
-    stroke-dasharray: 1000;
-    stroke-opacity: 0.25;
-    stroke-dashoffset:0;
-    -moz-animation: strokeFill 30s linear infinite alternate-reverse;
-    -webkit-animation: strokeFill 30s linear infinite alternate-reverse;
-    animation: strokeFill 30s linear infinite alternate-reverse;
-  }
+  .topBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    
+    path {
+      stroke: ${darkHoverBlue};
+      fill:${darkBlue};
+      fill-opacity:0;
+      stroke-width:0.4;
+      stroke-dasharray: 1000;
+      stroke-opacity: 0.25;
+      stroke-dashoffset:0;
+      -moz-animation: strokeFill 30s linear infinite alternate-reverse;
+      -webkit-animation: strokeFill 30s linear infinite alternate-reverse;
+      animation: strokeFill 30s linear infinite alternate-reverse;
+    }
 
-  @keyframes strokeFill{
-    0%  {stroke-dashoffset:1000;}
-    100%{stroke-dashoffset:0;}
-  }
-
-  @-webkit-keyframes strokeFill{
+    @keyframes strokeFill{
       0%  {stroke-dashoffset:1000;}
       100%{stroke-dashoffset:0;}
-  }
-  @-moz-keyframes strokeFill{
-      0%  {stroke-dashoffset:1000;}
-      100%{stroke-dashoffset:0;}
+    }
+
+    @-webkit-keyframes strokeFill{
+        0%  {stroke-dashoffset:1000;}
+        100%{stroke-dashoffset:0;}
+    }
+    @-moz-keyframes strokeFill{
+        0%  {stroke-dashoffset:1000;}
+        100%{stroke-dashoffset:0;}
+    }
+
   }
 
-}
+  .hideText {
+      display: none;
+    }
+
+  @media(max-width: 800px){
+      margin-bottom: 50px;
+  }
 `;
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 0;
   letter-spacing: 0.1rem;
 `;
 
-export const PageSubTitle = styled.h2`
-  font-size: 1.4rem;
+export const PageSubTitle = styled.h3`
+  font-size: 1rem;
   font-weight: 300;
   color: white;
   text-align: center;
   letter-spacing: 0.25rem;
-  margin: 0;
+  margin: 15px 0 0 0;
 `;
 
 export const PageDescription = styled.p`
@@ -79,7 +87,7 @@ export const PageDescription = styled.p`
   font-weight: 300;
   color: white;
   text-align: center;
-  margin: 10px auto 0;
+  margin: 20px auto 0;
   width: 250px;
   position: relative;
   line-height: 20px;
@@ -105,4 +113,6 @@ export const PageDescription = styled.p`
     background-color: white;
     opacity: 0.5;
   }
+
+  
 `;

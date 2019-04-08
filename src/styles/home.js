@@ -70,6 +70,7 @@ export const HomePage = styled.div`
 
   @media(max-width: 800px){
     flex-direction: column;
+    height: auto;
     
     .navContainer {
       width: 100%;

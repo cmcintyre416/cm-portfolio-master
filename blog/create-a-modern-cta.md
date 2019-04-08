@@ -1,5 +1,5 @@
 ---
-path: /creating-modern-cta/
+path: /creating-a-modern-cta/
 date: 2019-03-15T04:00:00.000Z
 title: Creating a modern 'call to action' to display on your portfolio site
 image: /assets/letter-blog-thumbnail.png

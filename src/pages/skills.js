@@ -59,13 +59,6 @@ const Skills = ({data}) => {
     return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
   });
 
-  const DisplayGithubData = () => {
-    const activity = githubData.recentGithubEvents;
-
-   
-    return <div></div>;
-  };
-
   return (
     <>
       <Header headerName="simpleHeader" linkTo="/"/>
@@ -92,7 +85,7 @@ const Skills = ({data}) => {
             {Skills} 
           </SkillsContainer>
           <GithubTracker>
-            <DisplayGithubData/>
+            {/* <DisplayGithubData/> */}
           </GithubTracker>
         </ContentWrapper>
       </MainWrapper>

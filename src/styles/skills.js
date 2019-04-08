@@ -37,6 +37,12 @@ export const SkillsFilters = styled.div`
     }
   }
 
+  input, select{
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    padding: 5px 10px;
+  }
+
   form {
     margin: 0;
     padding: 0;
@@ -55,6 +61,14 @@ export const SkillsFilters = styled.div`
 
       .selectorContainer, form{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        label {
+          margin: 10px 0;
+          font-weight: bold;
+        }
       }
 
       .selectorContainer {

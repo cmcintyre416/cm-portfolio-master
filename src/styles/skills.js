@@ -116,9 +116,10 @@ export const SkillContainer = styled.div`
       p {
         padding: 0;
         margin: 0;
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1.8px;
+        line-height: 14px;
         margin-top: 10px;
       }
 
@@ -198,6 +199,10 @@ export const SkillContainer = styled.div`
 
           .tag-systems {
             background-color: springgreen;
+          }
+
+          .tag-other {
+            background-color: orange;
           }
         }
 

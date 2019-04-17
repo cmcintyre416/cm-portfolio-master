@@ -110,7 +110,7 @@ export const SkillContainer = styled.div`
         margin: 0;
         padding: 0;
         filter: gray;
-        filter: grayscale(2);
+        filter: grayscale(1);
       }
 
       p {

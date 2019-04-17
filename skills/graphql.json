@@ -1,0 +1,8 @@
+{
+  "title": "GraphQL",
+  "subTitle": "Data query and manipulation",
+  "icon": "",
+  "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/450px-GraphQL_Logo.svg.png",
+  "description": "GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.",
+  "mainTag": "js"
+}

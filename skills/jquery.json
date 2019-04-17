@@ -1,7 +1,8 @@
 {
   "title": "Jquery",
   "subTitle": "jQuery is a fast, small, and feature-rich JavaScript library.",
-  "icon": "js",
+  "icon": "",
+  "urlImage": "https://cdn-images-1.medium.com/max/1600/0*g3ns8QALNBBH7CBA.",
   "description": "It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.",
   "mainTag": "js"
 }

@@ -1,7 +1,7 @@
 {
   "title": "Webpack",
   "subTitle": "Module bundler",
-  "urlImage": "https://webpack.js.org/e0b5805d423a4ec9473ee315250968b2.svg",
+  "urlImage": "https://raw.githubusercontent.com/webpack/media/master/logo/logo-on-white-bg.png",
   "description": "Webpack is an open-source JavaScript module bundler. It is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, even images if the corresponding plugins are included. ",
   "mainTag": "tools"
 }

@@ -12,16 +12,12 @@ const SkillsPosts = ({skill}) => {
   const [open, setOpen] = useState(false);
   
   const determineIcon = () => {
-    if(skill.icon === ''){
-      return (
-        <div>
-          Icon not found.
-        </div>
-      )
-    }else{
-      return (
-        <FontAwesomeIcon icon={["fab", skill.icon]} />
-      )
+    if(skill.icon){
+      return <FontAwesomeIcon icon={["fab", skill.icon]} />;
+    }else if(skill.urlImage){
+      return <img src={skill.urlImage}/>;
+    }else {
+      return <div>Icon not found.</div>;
     }
   } 
 

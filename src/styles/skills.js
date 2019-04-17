@@ -6,9 +6,13 @@ export const SkillsContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
+  margin-bottom: 300px;
+
+  @media(max-width: 1200px){
+      grid-template-columns:  1fr 1fr 1fr;
+  }
 
   @media(max-width: 900px){
-      grid-template-columns:  1fr 1fr 1fr;
       padding: 0 50px;
   }
 
@@ -82,7 +86,6 @@ export const SkillsFilters = styled.div`
 `;
 
 export const SkillContainer = styled.div`
-
     position: relative;
 
     &:hover .skillLogoWrapper{
@@ -95,7 +98,7 @@ export const SkillContainer = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 15px;
+      padding: 15px 10px; 
       background-color: white;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -105,15 +108,31 @@ export const SkillContainer = styled.div`
         font-size: 2.5rem;
       }
 
+      img {
+        height: 45px;
+        margin: 0;
+        padding: 0;
+        filter: gray;
+        filter: grayscale(1);
+      }
+
       p {
         padding: 0;
         margin: 0;
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1.8px;
+        line-height: 14px;
         margin-top: 10px;
-      }
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
 
+        @media(max-width: 1200px){
+          min-height: 25px;
+        }
+      }
     }
 
     .skillViewWrapper {
@@ -190,6 +209,10 @@ export const SkillContainer = styled.div`
 
           .tag-systems {
             background-color: springgreen;
+          }
+
+          .tag-other {
+            background-color: orange;
           }
         }
 

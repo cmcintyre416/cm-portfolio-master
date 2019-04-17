@@ -1,7 +1,7 @@
 {
   "title": "Less",
-  "subTitle": "Less css",
+  "subTitle": "Leaner Style Sheets",
   "icon": "less",
-  "description": "less",
+  "description": "Less (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS.",
   "mainTag": "css"
 }

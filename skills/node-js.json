@@ -2,6 +2,6 @@
   "title": "Node Js",
   "subTitle": "Javascript for the backend.",
   "icon": "node-js",
-  "description": "Node Js",
+  "description": "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.",
   "mainTag": "js"
 }

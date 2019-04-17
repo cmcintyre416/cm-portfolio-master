@@ -1,7 +1,7 @@
 {
   "title": "Jira",
-  "subTitle": "Ticket management and tracking software.",
+  "subTitle": "Software for PM.",
   "icon": "jira",
-  "description": "Ticket management and tracking software.",
+  "description": "Software that allows bug tracking and agile project management. ",
   "mainTag": "systems"
 }

@@ -1,7 +1,7 @@
 {
   "title": "React",
-  "subTitle": "Modern JS framework.",
+  "subTitle": "Javascript library",
   "icon": "react",
-  "description": "React is a JavaScript library for building user interfaces.",
+  "description": "React is a JavaScript library for building user interfaces. React can be used as a base in the development of single-page or mobile applications, as it's optimal only for its intended use of being the quickest method to fetch rapidly changing data that needs to be recorded. ",
   "mainTag": "js"
 }

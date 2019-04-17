@@ -2,6 +2,6 @@
   "title": "CSS",
   "subTitle": "Cascading Style Sheets",
   "icon": "css3",
-  "description": "Styling language.",
+  "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.",
   "mainTag": "css"
 }

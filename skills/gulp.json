@@ -1,7 +1,7 @@
 {
   "title": "Gulp",
-  "subTitle": "gulp",
+  "subTitle": "Streaming build system",
   "icon": "gulp",
-  "description": "gulp",
+  "description": "Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.",
   "mainTag": "tools"
 }

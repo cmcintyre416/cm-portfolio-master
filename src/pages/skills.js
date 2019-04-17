@@ -105,6 +105,7 @@ export const pageQuery = graphql`
           description
           mainTag
           icon
+          urlImage
         }
       }
     }

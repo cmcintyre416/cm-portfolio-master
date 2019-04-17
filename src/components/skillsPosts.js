@@ -28,7 +28,7 @@ const SkillsPosts = ({skill}) => {
   return (
     <SkillContainer onMouseLeave={()=> setOpen(false)}>
       <div className="skillLogoWrapper" onClick={() => setOpen(!open)}>
-        {determineIcon()}
+        {determineIcon}
         <p>{skill.title}</p>
       </div>
       <div className={`skillViewWrapper  ${open ? 'openView' : 'closeView'}`}>

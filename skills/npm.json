@@ -1,7 +1,7 @@
 {
   "title": "NPM",
-  "subTitle": "Npm",
+  "subTitle": "Software",
   "icon": "npm",
-  "description": "npm",
+  "description": "Npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.",
   "mainTag": "tools"
 }

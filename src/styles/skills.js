@@ -105,6 +105,14 @@ export const SkillContainer = styled.div`
         font-size: 2.5rem;
       }
 
+      img {
+        height: 45px;
+        margin: 0;
+        padding: 0;
+        filter: gray;
+        filter: grayscale(2);
+      }
+
       p {
         padding: 0;
         margin: 0;

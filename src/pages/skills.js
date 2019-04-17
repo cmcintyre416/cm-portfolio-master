@@ -12,26 +12,26 @@ import { skillTags } from "../../static/data/skillTags";
 import { MainWrapper, ContentWrapper } from '../styles/containers';
 import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
 
-function gitScrapes() {
-  const [scrapes, setScrapes] = useState({});
+// function gitScrapes() {
+//   const [scrapes, setScrapes] = useState({});
 
-  async function fetchScrapes() {
-    const res = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
-    const data = await res.json();
-    setScrapes(data);
-  }
+//   async function fetchScrapes() {
+//     const res = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
+//     const data = await res.json();
+//     setScrapes(data);
+//   }
 
-  useEffect(() => {
-    fetchScrapes();
-  }, []);
-  return scrapes;
-};
+//   useEffect(() => {
+//     fetchScrapes();
+//   }, []);
+//   return scrapes;
+// };
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  const githubData = gitScrapes();
+  // const githubData = gitScrapes();
   
   useEffect(() => { 
     // Initial List By Alphabet

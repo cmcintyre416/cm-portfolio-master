@@ -6,7 +6,7 @@ export const SkillsContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 
   @media(max-width: 1200px){
       grid-template-columns:  1fr 1fr 1fr;

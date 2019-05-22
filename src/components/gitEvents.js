@@ -5,11 +5,18 @@ import { GitEventsContainer, GitEventTitle, GitEventTracker } from "../styles/gi
 
 const GitEvents = ({event}) => {
   const [events, setEvents] = useState([]);
-  const [commitNumber, setCommitNumber] = useState(0);
+  const [commitNumber, setCommitNumber] = useState(1);
 
   useEffect(() => {
     getEvents();
   }, []);
+
+  useEffect(()=> {
+    const gitEventsContainer = document.querySelector('.gitEventsOverflow');
+    const translateAmount = commitNumber * 100;
+    console.log(translateAmount, commitNumber);
+    gitEventsContainer.style.transform = `translateX(calc(-${translateAmount}%))`;
+  }, [commitNumber]);
 
   const getEvents = async () => {
     const response = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
@@ -17,27 +24,12 @@ const GitEvents = ({event}) => {
     setEvents(data.recentGithubEvents.gitEvents[0].githubActivity);
   };
 
-  const scrollActivity = (e) => {
-    let direction = e.target.attributes.getNamedItem('direction').value;
-    console.log(events.length);
-    if(direction === 'left' && commitNumber > 0){
-      console.log('left');
-      setCommitNumber(commitNumber + 1);
-      changeDial();
-    }else if(direction === 'right' && commitNumber < events.length){
-      console.log('right');
+  const scrollActivity = async (e) => {
+    if(e.target.attributes.getNamedItem('direction').value == 'left' && commitNumber > 0){
       setCommitNumber(commitNumber - 1);
-      changeDial();
-    }else{
-      setCommitNumber(commitNumber);
-    };
-  };
-
-  const changeDial = () => {
-    const gitEventsContainer = document.querySelector('.gitEventsOverflow');
-    const translateAmount = commitNumber * 100;
-    console.log(translateAmount);
-    gitEventsContainer.style.transform = `translate(calc(${translateAmount}% + 20px))`;
+    }else if(e.target.attributes.getNamedItem('direction').value == 'right' && commitNumber < (events.length - 1)){
+      setCommitNumber(commitNumber + 1);
+    }
   };
 
   return (

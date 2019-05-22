@@ -39,11 +39,13 @@ export const GitEventsContainer = styled.div`
     display: flex;
     flex-direction: row;
     transition: 1s ease all;
+    width: 100%;
   }
 
   .gitEvents__event {
     padding: 10px 0;
-    min-width: calc(100% + 20px);
+    min-width: 100%;
+    width: 100%;
     padding-right: 20px;
   }
 

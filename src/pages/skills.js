@@ -11,7 +11,7 @@ import GitEvents from '../components/gitEvents'
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
-import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
+import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
@@ -69,9 +69,7 @@ const Skills = ({data}) => {
           <SkillsContainer>
             {displaySkills} 
           </SkillsContainer>
-          <GithubTracker>
-            <GitEvents/>
-          </GithubTracker>
+          <GitEvents/>
         </ContentWrapper>
       </MainWrapper>
     </>

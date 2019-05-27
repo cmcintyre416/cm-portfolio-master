@@ -22,6 +22,7 @@ export const SkillsContainer = styled.div`
 
   @media(max-width: 500px){
       grid-template-columns:  1fr;
+      padding: 0 25px;
   }
 `;
 
@@ -45,6 +46,11 @@ export const SkillsFilters = styled.div`
     border-radius: 5px;
     border: 1px solid lightgrey;
     padding: 5px 10px;
+
+    @media(max-width: 500px){
+      width: 100%;
+    }
+
   }
 
   form {
@@ -82,6 +88,10 @@ export const SkillsFilters = styled.div`
       form {
         margin: 10px 0 50px;
       }
+  }
+
+  @media(max-width: 500px){
+    padding: 0 25px;
   }
 `;
 
@@ -244,9 +254,4 @@ export const SkillContainer = styled.div`
     .closeView {
       display: none;
     }
-
-`;
-
-export const GithubTracker = styled.div`
-
 `;

@@ -12,8 +12,6 @@ const GitEvents = ({event}) => {
   const [events, setEvents] = useState([]);
   const [commitNumber, setCommitNumber] = useState(0);
 
-  const progress = document.querySelector('.gitEvents__progressTracker');
-
   useEffect(() => {
     getEvents();
   }, []);
@@ -37,6 +35,7 @@ const GitEvents = ({event}) => {
   };
 
   useEffect(()=> {
+    const progress = document.querySelector('.gitEvents__progressTracker');
     events.forEach((event, i)=>{
       let bubble = document.createElement('button');
       progress.appendChild(bubble);

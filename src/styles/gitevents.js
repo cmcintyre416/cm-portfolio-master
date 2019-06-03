@@ -123,16 +123,34 @@ export const GitEventsContainer = styled.div`
     padding: 10px 25px;
     min-width: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .gitEvents__commitTitle {
+      margin-bottom: 5px;
+    }
 
     .gitEvents__catTitle {
       font-weight: 600;
       margin-right: 15px;
     }
+
   }
 
   .gitEvents__commitContainer {
     overflow-y: scroll;
     flex-grow: 1;
+    border: 1px solid ${darkBlue};
+    border-radius: 5px;
+    padding: 20px;
+
+    span {
+      margin-right: 10px;
+    }
   }
 
   @media (max-width: 900px){

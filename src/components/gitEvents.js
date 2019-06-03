@@ -32,6 +32,7 @@ const GitEvents = ({event}) => {
   const getEvents = async () => {
     const response = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
     const data = await response.json();
+    console.log(data);
     setEvents(data.recentGithubEvents.gitEvents[0].githubActivity);
   };
 
@@ -68,11 +69,10 @@ const GitEvents = ({event}) => {
               <div className="gitEvents__event" key={`key-${event.id}`}>
                 <p><span className="gitEvents__catTitle">Activity Type:</span> {event.type}</p>
                 <p><span className="gitEvents__catTitle">Repository:</span> {event.repo.name}</p>
-                <p><span className="gitEvents__catTitle">Changes:</span> {event.payload.size}</p>
-                <p><span className="gitEvents__catTitle">Commits:</span></p>
+                <p className="gitEvents__commitTitle"><span className="gitEvents__catTitle gitEvents__commitTitle">Commits:</span></p>
                 <div className="gitEvents__commitContainer">
                   {event.payload.commits && event.payload.commits.map((commit, i)=>{
-                    return <p key={`eventCommit-${i}`}>{commit.message}</p>;
+                    return <p key={`eventCommit-${i}`}><span>-</span>{commit.message}</p>;
                   })}
                 </div>
               </div>

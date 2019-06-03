@@ -8,9 +8,10 @@ import { SkillContainer } from "../styles/skills.js";
 
 library.add(faReact, faJs, faCss3, faSass, faLess, faNpm, faGulp, faGithub, faJira, faNodeJs);
 
+
 const SkillsPosts = ({skill}) => {
   const [open, setOpen] = useState(false);
-  
+
   const determineIcon = () => {
     if(skill.icon){
       return <FontAwesomeIcon icon={["fab", skill.icon]} />;

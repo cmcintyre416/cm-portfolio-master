@@ -7,31 +7,16 @@ import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
 import SkillsPosts from '../components/skillsPosts';
+import GitEvents from '../components/gitEvents'
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
-import { SkillsFilters, SkillsContainer, GithubTracker } from "../styles/skills.js";
-
-// function gitScrapes() {
-//   const [scrapes, setScrapes] = useState({});
-
-//   async function fetchScrapes() {
-//     const res = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
-//     const data = await res.json();
-//     setScrapes(data);
-//   }
-
-//   useEffect(() => {
-//     fetchScrapes();
-//   }, []);
-//   return scrapes;
-// };
+import { SkillsFilters, SkillsContainer } from "../styles/skills.js";
 
 const Skills = ({data}) => {
   const [filterText, setFilter] = useState('');
   const [tagSelect, setTagSelect] = useState('');
   const [initialList, setInitialList] = useState([]);
-  // const githubData = gitScrapes();
   
   useEffect(() => { 
     // Initial List By Alphabet
@@ -41,7 +26,7 @@ const Skills = ({data}) => {
       return 0;
     });
     setInitialList(listAlpha);
-  });
+  }, []);
 
   const handleFilterChange = event => {
     setFilter(event.target.value);
@@ -55,7 +40,7 @@ const Skills = ({data}) => {
     return item.node.title.toLowerCase().includes(filterText.toLowerCase()) && item.node.mainTag.toLowerCase().includes(tagSelect.toLowerCase());
   });
 
-  const Skills = filteredList.map( (edge, i) => {
+  const displaySkills = filteredList.map( (edge, i) => {
     return <SkillsPosts key={`key-${i}`} skill={edge.node}/>
   });
 
@@ -82,11 +67,9 @@ const Skills = ({data}) => {
             </form>
           </SkillsFilters>
           <SkillsContainer>
-            {Skills} 
+            {displaySkills} 
           </SkillsContainer>
-          <GithubTracker>
-            {/* <DisplayGithubData/> */}
-          </GithubTracker>
+          <GitEvents/>
         </ContentWrapper>
       </MainWrapper>
     </>

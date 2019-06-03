@@ -39,6 +39,10 @@ const BackHomeContainer = styled.div`
         padding: 0 50px;
     }
 
+    @media(max-width: 500px){
+        padding: 0 25px;
+    }
+
 `;
 
 const QuickNav = styled.div`

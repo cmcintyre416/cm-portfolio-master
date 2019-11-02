@@ -153,6 +153,11 @@ export const GitEventsContainer = styled.div`
     }
   }
 
+  &.loading-events {
+    visibility: hidden;
+    transition: 1s ease-in;
+  }
+
   @media (max-width: 900px){
     margin: 0px 50px;
   }

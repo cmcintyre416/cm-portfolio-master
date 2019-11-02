@@ -10,6 +10,7 @@ library.add( faChevronLeft, faChevronRight);
 
 const GitEvents = ({event}) => {
   const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [commitNumber, setCommitNumber] = useState(0);
 
   useEffect(() => {
@@ -30,11 +31,11 @@ const GitEvents = ({event}) => {
   const getEvents = async () => {
     const response = await fetch(`https://stormy-reef-49194.herokuapp.com/githubData`);
     const data = await response.json();
-    console.log(data);
     setEvents(data.recentGithubEvents.gitEvents[0].githubActivity);
   };
 
   useEffect(()=> {
+    const gitEventsContainer = document.querySelector('#gitEventContainer');
     const progress = document.querySelector('.gitEvents__progressTracker');
     events.forEach((event, i)=>{
       let bubble = document.createElement('button');
@@ -44,6 +45,11 @@ const GitEvents = ({event}) => {
         setCommitNumber(i);
       });
     });
+
+    if(events.length > 0){
+      setLoading(false);
+      gitEventsContainer.classList.remove('loading-events');
+    };
 
   }, [events]);
 
@@ -61,7 +67,7 @@ const GitEvents = ({event}) => {
       <GitEventTitle>Recent Github Activity</GitEventTitle>
       <button onClick={scrollActivity} direction="left" className="gitEvents__scroll scroll--left"><div className="gitEvents__scrollBarCover"></div><FontAwesomeIcon icon='chevron-left'/></button>
       <button onClick={scrollActivity} direction="right" className="gitEvents__scroll scroll--right"><div className="gitEvents__scrollBarCover"></div><FontAwesomeIcon icon='chevron-right'/></button>
-      <GitEventsContainer id="gitEventContainer">
+      <GitEventsContainer id="gitEventContainer" className="loading-events">
         <div className="gitEventsOverflow">
           {events.map((event)=> {
             return (

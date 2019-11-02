@@ -7,7 +7,7 @@ import BackHome from '../components/backHome';
 import Header from '../components/header';
 import PageTitles from '../components/pageTitles';
 import SkillsPosts from '../components/skillsPosts';
-import GitEvents from '../components/gitEvents'
+// import GitEvents from '../components/gitEvents';
 import { skillTags } from "../../static/data/skillTags";
 
 import { MainWrapper, ContentWrapper } from '../styles/containers';
@@ -69,7 +69,7 @@ const Skills = ({data}) => {
           <SkillsContainer>
             {displaySkills} 
           </SkillsContainer>
-          <GitEvents/>
+          {/* <GitEvents/> */}
         </ContentWrapper>
       </MainWrapper>
     </>

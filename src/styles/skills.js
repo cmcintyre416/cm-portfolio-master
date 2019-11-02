@@ -150,6 +150,7 @@ export const SkillContainer = styled.div`
       left: -50px;
       right: -50px;
       top: 100%;
+      z-index: 100;
       padding-top: 20px;
 
         .skillViewInnerWrapper {
@@ -223,6 +224,11 @@ export const SkillContainer = styled.div`
 
           .tag-other {
             background-color: orange;
+          }
+
+          @media(max-width: 650px){
+            max-width: 380px;
+            margin: 0 auto;
           }
         }
 

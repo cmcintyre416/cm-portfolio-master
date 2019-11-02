@@ -227,7 +227,7 @@ export const SkillContainer = styled.div`
           }
 
           @media(max-width: 650px){
-            max-width: 380px;
+            max-width: 80%;
             margin: 0 auto;
           }
         }
